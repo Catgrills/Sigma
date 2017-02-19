@@ -19,7 +19,7 @@ I missed the good old layout of youtube, that's why I wanted to keep it as close
 
 How to install it ?
 -------------------------------
-After installing 'Stylish', you'll have to 'write a new style', copy/paste the code in 'Hope.css', name the style and then save ! Before installing it, I suggest you :
+After installing 'Stylish', you'll have to 'write a new style', copy/paste the code in 'sigma.css', name the style and then save ! Before installing it, I suggest you :
 
 * to install the font I used, namely 'Roboto' (www.fontsquirrel.com/fonts/rob…), 'Bebas Neue' (www.fontsquirrel.com/fonts/beb…), 'Bokutachi no Gothic 2' (www.freejapanesefont.com/bokut…) and if you want Meiryo, all of them are free so don't be shy.
 * download Adblock Plus to kill the ads.
