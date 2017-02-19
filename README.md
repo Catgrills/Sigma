@@ -21,7 +21,7 @@ How to install it ?
 -------------------------------
 After installing 'Stylish', you'll have to 'write a new style', copy/paste the code in 'sigma (desktop).css' or 'sigma (laptop).css', name the style and then save ! Before installing it, I suggest you :
 
-* to install the font I used, namely 'Roboto' (www.fontsquirrel.com/fonts/rob…), 'Bebas Neue' (www.fontsquirrel.com/fonts/beb…), 'Bokutachi no Gothic 2' (www.freejapanesefont.com/bokut…) and if you want Meiryo, all of them are free so don't be shy.
+* to install the font I used, namely 'Roboto' (https://www.fontsquirrel.com/fonts/roboto), 'Bebas Neue' (https://www.fontsquirrel.com/fonts/bebas-neue), 'Bokutachi no Gothic 2' (http://www.freejapanesefont.com/bokutachi-gothic-2-bold/) and if you want Meiryo, all of them are free so don't be shy.
 * download Adblock Plus to kill the ads.
 
 Where can I find your works ?
