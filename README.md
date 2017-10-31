@@ -1,31 +1,58 @@
-# Sigma
+# Sigma-G
 
-![screenshot](http://i.imgur.com/4KmqFOr.jpg)
-Listening to some chill stuff on Youtube with 'Sigma' while drinking coffee is the best ~
+![screenshot](https://a.pomf.cat/ryjaoj.png)
+Preview of Sigma-G.
 
-What's an userstyle ?
+About
 -------------------------------
 
-Simply put, it's a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff. To use it, there is an add-on called 'Stylish' for the majority of the browser, so if you are on Chrome, Firefox, Opera and such go for it ! I also recommend you to go to userstyles.org (userstyles.org/) where you can found a lot of styles for a lot of website.
+Sigma-G is a custom stylesheet for youtube.
 
-What do 'Sigma' change ? 
+A custom stylesheet (or userstyles) a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+
+Instruction
 -------------------------------
 
-I missed the good old layout of youtube, that's why I wanted to keep it as close as the original, but with a more modern look :
-- in general, the 'biggest' change is of course the headbar which is now a sidebar because I love sidebar and haven't had a chance to write one for an website. Thus I replaced the differents buttons 'Upload', 'Sign out/Log in', 'Search', etc, by differents icons : for example, the user icon/log in button are represented by Ed (if you don't know Ed, just watch Cowboy Bebop, good stuff), and you'll be able to change the picture, to activate the search bar you'll have to hover the search icon, the upload button is the arrow and the notifications the clock, but I'm sure you were aware of it. I tweaked the appearance of the menubar a bit too and won't scroll with the page (you'll be able to scroll with the mouse when you click the menubar) : added a little banner (FLCL for the win) which is actually the home button, changed the font of the section and colors of the counter badge, removed the icons of the subsection (mychannel, trending, subscriptions, liked videos, ...), remplaced the old hover ffect by a simplier one.
-- for the watch section you can go to the preview I posted before, if you are too lazy just stay here : in theater mode the video is much more bigger (in 720p), contrary to 'Spectre' I didn't really change the position of the elements (such as the action panel, the autoplay button, the uploader's avatar, etc.), and other than that, I put the title of each box (information, description and comment) in a box with some flat icon. Like usual, some colors, font-weight, colors were changed and others stuff (minor stuff don't worry) were removed, but I'm sure you'll realize all of it when you'll use this script.
-- for the search, only thing you'll notice is (fucking again) a kind of banner at the top (same case for the history section even tho it isn't presented in the screenshot), for those who have a big screen and/or resolution, I made the result box a lot bigger (cause it was too small for my taste), for the filter you'll only just have to click the button and it will expand the box and the background with it. And of course (even tho you can't see it in the screenshot), the pagination box was changed too !
-- for the others sections, you'll see it for yourself ~
+<strong>Step 1 : Install Stylish</strong>
 
-How to install it ?
+<span>Depending of your browser.</span>
+<ol>
+<li>for <a href="https://addons.mozilla.org/en-US/firefox/addon/stylish/">Mozilla Firefox</a></li>
+<li>for <a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">Google Chrome</a></li>
+<li>for <a href="https://addons.opera.com/en/extensions/details/stylish/">Opera</a></li>
+<li>for <a href="http://sobolev.us/stylish/">Safari</a></li>
+<li> for <a href="https://play.google.com/store/apps/details?id=ru.pmmlabs.stylish&amp;hl=en">Dolphin</a></li>
+</ol>
+
+<strong>Step 2 : Install the script </strong>
+<ol>
+<li> Via <a href="https://userstyles.org/styles/145275/sigma-g-yt-css">userstyles</a> : click the button <i>install Style</i> and it's done.</li>
+<li> Or <a href="https://pastebin.com/eb05Bdjx">manually</a> : create a new style in Stylish and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+</ol>
+
+<strong>Step 3 : Install the font </strong>
+
+I use several fonts for my custom stylesheet.
+<ol>
+<li> <a href="https://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a></li>
+<li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a> (make sure to install Roboto Condensed)</li>
+<li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
+</ol>
+
+<strong>Step 4 : Show your appreciation </strong>
+<ol>
+<li>Feel free to comment this submission (critique, suggestion, compliment, etc).</li>
+<li>If you like my works, don't hesitate to watch me.</li>
+<li>You can share it, but don't forget to mention me.</li>
+</ol>
+
+
+Trivia
 -------------------------------
-After installing 'Stylish', you'll have to 'write a new style', copy/paste the code in 'sigma (desktop).css' or 'sigma (laptop).css', name the style and then save ! Before installing it, I suggest you :
 
-* to install the font I used, namely 'Roboto' (https://www.fontsquirrel.com/fonts/roboto), 'Bebas Neue' (https://www.fontsquirrel.com/fonts/bebas-neue), 'Bokutachi no Gothic 2' (http://www.freejapanesefont.com/bokutachi-gothic-2-bold/) and if you want Meiryo, all of them are free so don't be shy.
-* download Adblock Plus to kill the ads.
+I decided to name the script Sigma-G because it reminded me of the times where I was writing mathematic lessons while listening to some chill musics, and the letter sigma appeared almost every time. The G comes from the word Greek since Sigma is a letter of the Greek alphabet,  and I used this letter to differenciate it with my previous Youtube script called Sigma.
 
-Where can I find your works ?
+Report
 -------------------------------
-I have a deviantart page : nicknameisfortheweak.deviantart.com, I also submit my script in pastebin : http://pastebin.com/u/Catgrills
 
-And that's it, I hope you'll enjoy this script if you see this submission ! Like usual, if you find the script cool or bad, if you have questions, suggestions, there is a section called 'Comments', you can use it everytime !
+If you find some elements that weren't tweaked or that you simply want to modify or re-add an element that was removed, don't hesitate to report it in the comments.
