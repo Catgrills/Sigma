@@ -8,7 +8,7 @@ About
 
 Sigma-G is a custom stylesheet for youtube.
 
-A custom stylesheet (or userstyles) a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
 
 Instruction
 -------------------------------
@@ -50,7 +50,7 @@ I use several fonts for my custom stylesheet.
 Trivia
 -------------------------------
 
-I decided to name the script Sigma-G because it reminded me of the times where I was writing mathematic lessons while listening to some chill musics, and the letter sigma appeared almost every time. The G comes from the word Greek since Sigma is a letter of the Greek alphabet,  and I used this letter to differenciate it with my previous Youtube script called Sigma.
+I decided to name the script <i>Sigma-G</i> because it reminded me of the times where I was writing mathematic lessons while listening to some chill musics, and the letter sigma appeared almost every time. The <i>G</i> comes from the word Greek since Sigma is a letter of the Greek alphabet,  and I used this letter to differenciate it with my previous Youtube script called <i>Sigma</i>.
 
 Report
 -------------------------------
