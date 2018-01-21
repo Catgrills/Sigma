@@ -1,14 +1,18 @@
 # Sigma-G
 
-![screenshot](https://a.pomf.cat/ryjaoj.png)
-Preview of Sigma-G.
+![screenshot](https://s1.gifyu.com/images/Screenshot-1276.png)
+
+![screenshot](https://s1.gifyu.com/images/Screenshot-1277.png)
+
+Preview of <i>Sigma-G</i>.
 
 About
 -------------------------------
 
-Sigma-G is a custom stylesheet for youtube.
+<i>Sigma-G</i> is a custom stylesheet for </i>Youtube</i>.
 
-A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+Userstyles are CSS code designed to alter the appearance of one, some, or all sites.
+
 
 Instruction
 -------------------------------
@@ -46,13 +50,7 @@ I use several fonts for my custom stylesheet.
 <li>You can share it, but don't forget to mention me.</li>
 </ol>
 
-
-Trivia
--------------------------------
-
-I decided to name the script <i>Sigma-G</i> because it reminded me of the times where I was writing mathematic lessons while listening to some chill musics, and the letter sigma appeared almost every time. The <i>G</i> comes from the word Greek since Sigma is a letter of the Greek alphabet,  and I used this letter to differenciate it with my previous Youtube script called <i>Sigma</i>.
-
 Report
 -------------------------------
 
-If you find some elements that weren't tweaked or that you simply want to modify or re-add an element that was removed, don't hesitate to report it in the comments.
+Don't hesitate to report any issues you find while using this userstyle.
