@@ -2,7 +2,7 @@
 
 ![screenshot](https://s1.gifyu.com/images/Screenshot-1276.png)
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1277.png)
+![screenshot](https://s1.gifyu.com/images/Screenshot-1278.png)
 
 Preview of <i>Sigma-G</i>.
 
