@@ -39,8 +39,8 @@ Instruction
 I use several fonts for my custom stylesheet.
 <ol>
 <li> <a href="https://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a></li>
-<li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a> (make sure to install Roboto Condensed)</li>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
+<li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
 
 <strong>Step 4 : Show your appreciation </strong>
