@@ -1,8 +1,6 @@
 # Sigma-G
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1276.png)
-
-![screenshot](https://s1.gifyu.com/images/Screenshot-1278.png)
+<img src="preview_sigma-g.png" width="100%">
 
 Preview of <i>Sigma-G</i>.
 
