@@ -864,6 +864,14 @@
         margin-left: 10px !important;
     }
 
+    #title.ytd-feed-entry-renderer {
+        color: var(--secondary-color) !important;
+        font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+        font-size: 17pt !important;
+        height: 22px !important;
+        max-height: 25px !important;
+    }
+	
     #subtitle.ytd-shelf-renderer {
         color: var(--secondary-color) !important;
         font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
