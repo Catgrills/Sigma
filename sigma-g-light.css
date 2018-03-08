@@ -380,49 +380,73 @@
         fill: var(--fill) !important;
     }
 
-    /* TRENDING/SUBSCRIPTIONS */
-
+/* TRENDING/SUBSCRIPTIONS */
+    
     /** DESCRIPTION : change the elements of the trending/subscriptions page **/
-    ytd-two-column-browse-results-renderer.ytd-browse #dismissable.ytd-video-renderer {
+	ytd-two-column-browse-results-renderer.ytd-browse #dismissable.ytd-video-renderer {
         background: var(--card-bg) !important;
         border: 3px !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+        box-shadow: 0px 1px 2px rgba(0,0,0,.15) !important;
         padding: 15px !important;
     }
-
-    ytd-two-column-browse-results-renderer.ytd-browse #video-title.ytd-video-renderer {
+    
+    ytd-two-column-browse-results-renderer.ytd-browse #avatar.ytd-channel-renderer {
+     	box-shadow: none !important;   
+    }
+    
+    ytd-two-column-browse-results-renderer.ytd-browse yt-img-shadow.ytd-channel-renderer,
+    ytd-two-column-browse-results-renderer.ytd-browse #avatar.ytd-channel-renderer #img {
+        height: 100px !important;
+        width: 100px !important;
+    }
+    
+    ytd-two-column-browse-results-renderer.ytd-browse #video-title.ytd-video-renderer,
+    ytd-two-column-browse-results-renderer.ytd-browse #channel-title.ytd-channel-renderer span.ytd-channel-renderer {
         color: var(--primary-color) !important;
         font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
         font-size: 16pt !important;
         height: 26px !important;
-    }
+	}
 
-    #description-text.ytd-video-renderer {
+    ytd-two-column-browse-results-renderer.ytd-browse #metadata.ytd-channel-renderer * {
+        color: var(--secondary-color) !important;
         font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
-        font-size: 14pt !important;
+     	font-size: 14pt !important;   
+        height: 20px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;        
+    }
+    
+    #description-text.ytd-video-renderer,
+    ytd-two-column-browse-results-renderer.ytd-browse #description.ytd-channel-renderer {
+        color: var(--secondary-color) !important;
+        font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+     	font-size: 14pt !important;   
         height: 20px !important;
         overflow: hidden !important;
         white-space: nowrap !important;
         text-overflow: ellipsis !important;
     }
-
-    #description-text.ytd-video-renderer * {
+    
+    #description-text.ytd-video-renderer *,
+    ytd-two-column-browse-results-renderer.ytd-browse #description.ytd-channel-renderer * {
         font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
     }
-
+    
     ytd-two-column-browse-results-renderer.ytd-browse .text-wrapper.ytd-video-renderer .ytd-badge-supported-renderer {
-        display: none !important;
+     	display: none !important;   
     }
 
-    ytd-two-column-browse-results-renderer.ytd-browse a[is="yt-endpoint"].ytd-button-renderer,
+    ytd-two-column-browse-results-renderer.ytd-browse a[is="yt-endpoint"].ytd-button-renderer, 
     ytd-two-column-browse-results-renderer.ytd-browse a[is="yt-endpoint"].ytd-button-renderer * {
         display: block !important;
     }
 
     ytd-two-column-browse-results-renderer.ytd-browse a[is="yt-endpoint"].ytd-button-renderer #tooltip.paper-tooltip {
-        display: none !important;
+     	display: none !important;   
     }
-
+    
     /* SEARCH */
 
     /** DESCRIPTION : change the elements of the search page **/
