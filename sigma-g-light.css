@@ -300,7 +300,7 @@
     }
 
     yt-formatted-string[ellipsis-truncate] a.yt-formatted-string:last-child {
-        color: var(--primary-color) !important;
+        color: var(--secondary-color) !important;
         font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
         font-size: 14pt !important;
     }
