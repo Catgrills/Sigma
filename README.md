@@ -1,6 +1,6 @@
 # Sigma-G
 
-<img src="preview_sigma-g.png" width="100%">
+<img src="preview_2_sigma-g.png" width="100%">
 
 Preview of <i>Sigma-G</i>.
 
@@ -28,16 +28,17 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> Via <a href="https://userstyles.org/styles/145275/sigma-g-yt-css">userstyles</a> : click the button <i>install Style</i> and it's done.</li>
-<li> Or <a href="https://pastebin.com/eb05Bdjx">manually</a> : create a new style in Stylish and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li> Via userstyles (<a href="https://userstyles.org/styles/145275/sigma-g-light-yt-css">light version</a> or <a href="https://userstyles.org/styles/156811/sigma-g-dark-yt-css">dark version</a>) : click the button <i>install Style</i> and it's done.</li>
+<li> Or manually (<a href="https://pastebin.com/s8HsSSx7">light version</a> or <a href="https://pastebin.com/hCngC1AE">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">sigma-g.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
 </ol>
 
 <strong>Step 3 : Install the font </strong>
 
 I use several fonts for my custom stylesheet.
 <ol>
-<li> <a href="https://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a></li>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
+<li> <a href="https://www.freejapanesefont.com/honoka-antique-kaku-download/">Honoka Antique Kaku</a></li>
 <li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
 
