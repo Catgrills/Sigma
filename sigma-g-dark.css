@@ -59,7 +59,8 @@
     #masthead-container .style-scope.ytd-button-renderer[href="/upload"],
     yt-icon.ytd-badge-supported-renderer,
     yt-icon.ytd-pinned-comment-badge-renderer,
-    ytd-thumbnail-overlay-side-panel-renderer {
+    ytd-thumbnail-overlay-side-panel-renderer,
+    ytd-watch #top-level-buttons .style-scope.ytd-menu-renderer.force-icon-button.style-default {
         display: none !important;  
     }
     
