@@ -2,7 +2,8 @@
 
     /* COLORS */
 
-    /** DESCRIPTION : set the colors **/:root {
+    /** DESCRIPTION : set the colors **/
+    :root {
         --body-bg: #FFF !important;
         --card-bg: #F0F1F5 !important;
         --card-bg-2:#282930 !important;
