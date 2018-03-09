@@ -49,6 +49,7 @@
     #hearted-border.ytd-creator-heart-renderer,
     #logo.ytd-masthead,
     #masthead-container.ytd-app::after,
+    #masthead-container .style-scope.ytd-button-renderer[href="/upload"],
     #play-button,
     #primary-items #play-all,
     #sentiment,
