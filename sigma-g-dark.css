@@ -24,9 +24,9 @@
         font-weight: normal;
     }
     
-	*::-moz-focus-inner {
-		border: 0;
-	}
+    *::-moz-focus-inner {
+ 	border: 0;
+    }
     
     a:hover {
      	background: transparent !important;   
@@ -42,11 +42,11 @@
     #collapsible,
     #continuation.ytd-comment-replies-renderer yt-next-continuation.ytd-comment-replies-renderer,
     #country-code.ytd-topbar-logo-renderer,
-	.description #more.ytd-expander,
+    .description #more.ytd-expander,
     #footer,
     #guide-links-primary.ytd-guide-renderer,
     #hearted-border.ytd-creator-heart-renderer,
- 	#logo.ytd-masthead,
+    #logo.ytd-masthead,
     #masthead-container.ytd-app::after,
     #play-button,
     #primary-items #play-all,
@@ -214,7 +214,7 @@
     
 /* HOME */
     
-	/** DESCRIPTION : change the elements of the home page **/
+    /** DESCRIPTION : change the elements of the home page **/
     ytd-two-column-browse-results-renderer.ytd-browse {
         /*** HOME CONTAINER ***/
         width: 80% !important;
