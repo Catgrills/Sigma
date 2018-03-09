@@ -14,24 +14,7 @@
         --fill: #7E7E7E !important;
         --invert: invert(0) !important;
     }
-
-@-moz-document domain("youtube.com") {
-
-    /* COLORS */
-
-    /** DESCRIPTION : set the colors **/:root {
-        --body-bg: #272932 !important;
-        --card-bg: #2B3D41 !important;
-        --card-bg-2:#4C5F6B !important;
-        --header-bg: #2B3D41 !important;
-        --search-bg: #2B3D41 !important;
-        --border-color: #212121 !important;
-        --primary-color: #FFF !important;
-        --secondary-color: #CFDBD5 !important;
-        --fill: #FFF !important;
-        --invert: invert(1) !important;
-    }
-
+	
     /* GENERAL */
 
     /** DESCRIPTION : set the main font and change others elements **/
