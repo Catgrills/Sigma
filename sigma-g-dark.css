@@ -1485,10 +1485,6 @@
         right: 10px !important;
     }
 
-    #container.ytd-playlist-panel-renderer #top-level-buttons.ytd-menu-renderer {
-        visibility: hidden !important;
-    }
-
     .playlist-items.ytd-playlist-panel-renderer {
 
         /*** WATCH PLAYLIST ITEMS ***/
