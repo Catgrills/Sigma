@@ -1041,7 +1041,6 @@
 
     ytd-watch:not([theater]) .video-stream.html5-main-video {
         background: var(--card-bg) !important;
-        width: 100% !important;
     }
 
     ytd-watch[theater] #movie_player {
