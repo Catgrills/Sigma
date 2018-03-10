@@ -7,7 +7,7 @@ Preview of <i>Sigma-G</i>.
 About
 -------------------------------
 
-<i>Sigma-G</i> is a custom stylesheet for </i>Youtube</i>.
+<i>Sigma-G</i> is a custom stylesheet for </i>Youtube</i> (NEW YOUTUBE ONLY).
 
 Userstyles are CSS code designed to alter the appearance of one, some, or all sites.
 
