@@ -1294,6 +1294,34 @@
         font-weight: normal !important;
         text-transform: Capitalize !important;
     }
+    
+    #footer.ytd-commentbox {
+        /*** WATCH COMMENTS BUTTONS ***/
+        width: 100% !important;
+        margin-top: 20px !important;
+        display: block !important;
+    }
+    
+    #footer.ytd-commentbox * {
+        border-radius: 2px !important;
+        font-family: "Roboto Condensed" !important;
+        font-size: 15pt !important;
+        font-weight: bold !important;
+    }
+    
+    #cancel-button * {
+        color: var(--secondary-color) !important;    
+    }
+    
+    #submit-button {
+    	box-shadow: 0px 1px 2px rgba(0,0,0,.1) !important;
+    }
+
+    #submit-button * {
+        background: #00587A !important;
+    	box-shadow: 0px 1px 2px rgba(0,0,0,.1) !important;
+        color: #FFF !important;
+    }
 
     #author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer,
     #author-thumbnail.ytd-comment-simplebox-renderer {
