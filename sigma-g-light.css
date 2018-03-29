@@ -4,9 +4,9 @@
 
 	/** DESCRIPTION : set the colors **/
 	:root {
-		--body-bg: #FFF !important;
+		--body-bg: #FFF !important; 
 		--card-bg: #F0F1F5 !important;
-		--card-bg-2:#282930 !important;
+		--card-bg-2: #282930 !important;
 		--header-bg: #F0F1F5 !important;
 		--search-bg: #FFF !important;
 		--border-color: #BEBEBE !important;
@@ -33,7 +33,8 @@
 		background: transparent !important;
 	}
 
-	ytd-page-manager > .ytd-page-manager {
+	ytd-page-manager > .ytd-page-manager,
+	ytd-app {
 		background: var(--body-bg) !important;
 	}
 
@@ -47,6 +48,7 @@
 	#footer,
 	#guide-links-primary.ytd-guide-renderer,
 	#hearted-border.ytd-creator-heart-renderer,
+	.less-button.ytd-comment-renderer,
 	#logo.ytd-masthead,
 	#masthead-container.ytd-app::after,
 	#play-button,
@@ -54,6 +56,7 @@
 	#sentiment,
 	#separator,
 	#show-hide-button,
+	#button[aria-label="Upload"],
 	#masthead-container .style-scope.ytd-button-renderer[href="/upload"],
 	.super-title.ytd-video-primary-info-renderer,
 	#top-level-buttons.ytd-menu-renderer:not(:empty) + #button.ytd-menu-renderer,ytd-comment-renderer .more-button.ytd-comment-renderer,yt-icon.ytd-badge-supported-renderer,yt-icon.ytd-pinned-comment-badge-renderer,ytd-thumbnail-overlay-side-panel-renderer {
@@ -203,7 +206,7 @@
 		background: transparent !important;
 	}
 
-	#container.ytd-masthead button.yt-icon-button > yt-icon {
+	.style-scope.ytd-masthead.notification-button-style-type-default yt-icon {
 
 		/*** HEADER NOTIFICATION BUTTON ***/
 		background: no-repeat url("https://i.imgur.com/Qo3NJzX.png") center !important;
@@ -424,14 +427,14 @@
 	ytd-two-column-browse-results-renderer.ytd-browse #video-title.ytd-video-renderer,
 	ytd-two-column-browse-results-renderer.ytd-browse #channel-title.ytd-channel-renderer span.ytd-channel-renderer {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 16pt !important;
 		height: 26px !important;
 	}
 
 	ytd-two-column-browse-results-renderer.ytd-browse #metadata.ytd-channel-renderer * {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		height: 20px !important;
 		overflow: hidden !important;
@@ -442,7 +445,7 @@
 	#description-text.ytd-video-renderer,
 	ytd-two-column-browse-results-renderer.ytd-browse #description.ytd-channel-renderer {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		height: 20px !important;
 		overflow: hidden !important;
@@ -452,7 +455,7 @@
 
 	#description-text.ytd-video-renderer *,
 	ytd-two-column-browse-results-renderer.ytd-browse #description.ytd-channel-renderer * {
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 	}
 
 	ytd-two-column-browse-results-renderer.ytd-browse .text-wrapper.ytd-video-renderer .ytd-badge-supported-renderer {
@@ -491,7 +494,7 @@
 	ytd-two-column-search-results-renderer ytd-shelf-renderer.ytd-item-section-renderer #title-container.ytd-shelf-renderer *,
 	ytd-two-column-search-results-renderer #title.ytd-exploratory-results-renderer {
 		color: #3D8EB9 !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 19pt !important;
 		overflow: visible !important;
 	}
@@ -509,8 +512,13 @@
 	}
 
 	#collapse * {
+		color: var(--primary-color);
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
+	}
+
+	#filter-group-name.ytd-search-filter-group-renderer {
+		border-style: dotted;
 	}
 
 	yt-did-you-mean-renderer * {
@@ -553,7 +561,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer ytd-playlist-renderer.ytd-item-section-renderer #video-title.ytd-playlist-renderer,
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #channel-title.ytd-channel-renderer span.ytd-channel-renderer {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 17pt !important;
 		height: 26px !important;
 		margin-bottom: 10px !important;
@@ -577,7 +585,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer #metadata-line.ytd-video-meta-block *,
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #metadata.ytd-channel-renderer * {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 15pt !important;
 	}
 
@@ -590,7 +598,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #list.ytd-playlist-renderer *,
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #view-more.ytd-playlist-renderer *,
 	#description.ytd-channel-renderer {
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		line-height: 25px !important;
 	}
@@ -641,46 +649,49 @@
 		padding-left: 20px !important;
 	}
 
-	#watch-card-header.ytd-generic-watch-card {
-		background: #E01931 !important;
-	}
-
-	ytd-generic-watch-card {
+	.style-scope.ytd-universal-watch-card-renderer {
 		background: var(--card-bg-2) !important;
-		border-bottom-right-radius: 2px !important;
-		border-bottom-left-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
-	}
-
-	ytd-artist-watch-card-renderer {
 		border-top-right-radius: 2px !important;
 		border-top-left-radius: 2px !important;
 	}
 
-	ytd-generic-watch-card #watch-card-title.ytd-generic-watch-card,
-	ytd-generic-watch-card #related-header * {
-		color: #FFF !important;
+	.style-scope.ytd-universal-watch-card-renderer #watch-card-title.yt-simple-endpoint.ytd-watch-card-rich-header-renderer * {
 		font-family: "Roboto Condensed" !important;
-		font-size: 17pt !important;
+		font-size: 16pt !important;
 	}
 
-	ytd-generic-watch-card #watch-card-labels.ytd-generic-watch-card  * {
+	#badge-row.ytd-watch-card-rich-header-renderer * {
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
 	}
 
-	ytd-generic-watch-card  paper-tabs.ytd-generic-watch-card {
-		display: none !important;
+	.style-scope.ytd-universal-watch-card-renderer #lists {
+		background: var(--card-bg-2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		margin-top: -16px !important;
 	}
 
-	ytd-generic-watch-card .video-row.ytd-watch-card-video-list-renderer {
-		border-bottom: 1px dotted #000 !important;
+	.style-scope.ytd-universal-watch-card-renderer ytd-watch-card-compact-video-renderer[is-condensed] {
+		border-bottom: 1px dotted #BEBEBE !important;
+		padding: 10px 15px 15px 15px !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer ytd-watch-card-compact-video-renderer[is-condensed] *,
+	#view-all-endpoint.yt-simple-endpoint.ytd-vertical-watch-card-list-renderer {
+		color: #FFF !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
+		font-size: 14pt !important;
+	}
+
+	#view-all-endpoint.yt-simple-endpoint.ytd-vertical-watch-card-list-renderer {
+		border: none !important;
+		padding: 0px 15px 20px 15px !important;
 	}
 
 	ytd-generic-watch-card .video-row.ytd-watch-card-video-list-renderer *,
 	ytd-generic-watch-card  .related-entity-title.ytd-generic-watch-card {
 		color: #FFF !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		height: 20px !important;
 		max-height: 25px !important;
@@ -776,7 +787,7 @@
 
 	ytd-browse[page-subtype="playlist"] #primary.ytd-two-column-browse-results-renderer #video-title.ytd-playlist-video-renderer {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		height: 23px !important;
 		max-height: 23px !important;
@@ -877,7 +888,7 @@
 
 	#label-text.yt-dropdown-menu {
 		color: #3D8EB9 !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 18pt !important;
 		overflow: visible !important;
 	}
@@ -888,7 +899,7 @@
 
 	#title.ytd-feed-entry-renderer {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 17pt !important;
 		height: 22px !important;
 		max-height: 25px !important;
@@ -896,7 +907,7 @@
 
 	#subtitle.ytd-shelf-renderer {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 15pt !important;
 		height: 22px !important;
 		max-height: 25px !important;
@@ -915,7 +926,7 @@
 	#items.ytd-grid-renderer > ytd-grid-playlist-renderer.ytd-grid-renderer #video-title,
 	#video-title.ytd-grid-playlist-renderer {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		max-height: 27px !important;
 		height: 27px !important;
@@ -1057,7 +1068,7 @@
 
 	.captions-text * {
 		border-radius: 3px !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 18pt !important;
 		padding: 5px 8px 7px 8px !important;
 		width: 100% !important;
@@ -1083,7 +1094,7 @@
 
 		/*** WATCH INFORMATIONS TITLE ***/
 		color: var(--primary-color);
-		font-family: "Roboto Condensed", "Honoka Antique-Kaku" !important;
+		font-family: "Roboto Condensed", "Honoka Antique-Kaku", "BM YEONSUNG" !important;
 		font-size: 20pt !important;
 		height: 32px !important;
 		line-height: 32px !important;
@@ -1215,6 +1226,17 @@
 		color: var(--primary-color) !important;
 	}
 
+	#owner-container #button * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto Condensed" !important;
+		font-size: 14pt !important;
+		text-transform: capitalize;
+	}
+
+	#owner-container .style-scope.ytd-subscribe-button-renderer {
+		text-transform: uppercase !important;
+	}
+
 	.date.ytd-video-secondary-info-renderer {
 		color: var(--secondary-color) !important;
 	}
@@ -1248,8 +1270,12 @@
 		color: #FFF !important;
 	}
 
-	#notification-button {
+	#notification-preference-toggle-button,
+	#notification-preference-toggle-button * {
 		background: transparent !important;
+	}
+
+	#notification-preference-toggle-button {
 		margin-top: 2px;
 	}
 
@@ -1265,7 +1291,7 @@
 
 	.description.style-scope.ytd-video-secondary-info-renderer * {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		opacity: .9 !important;
 	}
 
@@ -1294,8 +1320,9 @@
 		font-weight: normal !important;
 		text-transform: Capitalize !important;
 	}
-	
+
 	#footer.ytd-commentbox {
+
 		/*** WATCH COMMENTS BUTTONS ***/
 		width: 100% !important;
 		margin-top: 20px !important;
@@ -1310,16 +1337,16 @@
 	}
 
 	#cancel-button * {
-		color: var(--secondary-color) !important;    
+		color: var(--secondary-color) !important;
 	}
 
 	#submit-button {
-		box-shadow: 0px 1px 2px rgba(0,0,0,.1) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	#submit-button * {
 		background: #00587A !important;
-		box-shadow: 0px 1px 2px rgba(0,0,0,.1) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
 	}
 
@@ -1350,7 +1377,7 @@
 
 		/*** WATCH COMMENTS AUTHOR ***/
 		color: #3D8EB9 !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 17pt !important;
 		font-weight: normal !important;
 		max-width: 100% !important;
@@ -1401,7 +1428,7 @@
 	#placeholder-area.ytd-comment-simplebox-renderer *,
 	#main.ytd-commentbox #creation-box * {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 15pt !important;
 		line-height: 22pt !important;
 	}
@@ -1551,7 +1578,7 @@
 		/*** WATCH PLAYLIST ITEMS DATA TITLE ***/
 		color: var(--primary-color) !important;
 		font-size: 14pt !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		max-height: 27px !important;
 		height: 20px !important;
 		overflow: hidden;
@@ -1698,7 +1725,7 @@
 
 		/*** WATCH RELATED VIDEOS ITEMS TITLE ***/
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
 		height: auto !important;
 		line-height: 23px !important;
