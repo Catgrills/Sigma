@@ -1331,6 +1331,7 @@
 
 	#footer.ytd-commentbox * {
 		border-radius: 2px !important;
+		box-shadow: none !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
 		font-weight: bold !important;
