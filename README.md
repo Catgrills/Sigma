@@ -30,7 +30,7 @@ Instruction
 <ol>
 <li> Via userstyles (<a href="https://userstyles.org/styles/145275/sigma-g-light-yt-css">light version</a> or <a href="https://userstyles.org/styles/156811/sigma-g-dark-yt-css">dark version</a>) : click the button <i>install Style</i> and it's done.</li>
 <li> Or manually (<a href="https://pastebin.com/s8HsSSx7">light version</a> or <a href="https://pastebin.com/hCngC1AE">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
-<li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">sigma-g.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
+<li><b>(NEW) STYLUS ONLY</b> : <a href="https://raw.githubusercontent.com/Catgrills/Sigma-G/master/sigma-g.user.css">click here</a>.</li>
 </ol>
 
 <strong>Step 3 : Install the font </strong>
