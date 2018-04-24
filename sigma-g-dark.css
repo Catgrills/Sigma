@@ -144,17 +144,24 @@
 		margin-right: -7px !important;
 	}
 
-	ytd-searchbox[mode="legacy"] #container.ytd-searchbox {
-
+    	#container.ytd-searchbox {
+		
 		/*** HEADER SEARCH BOX ***/
 		background: transparent !important;
 		border: none !important;
 		box-shadow: none !important;
+		width: 400px !important;
+    	}
+    
+	#search-form.ytd-searchbox {
+		position: absolute !important;
+		top: 12px !important;
+		left: 162px !important;
 	}
 
 	#container.ytd-masthead #search {
 		color: var(--secondary-color) !important;
-		font-family: "Roboto Condensed" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 15pt !important;
 	}
 
