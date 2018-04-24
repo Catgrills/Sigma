@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma-G
 @namespace      https://github.com/Catgrills/Sigma-G
-@version        1.0.1
+@version        1.0.2
 @description    An userstyle for Youtube called Sigma-G
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -170,18 +170,25 @@
         margin-right: -7px !important;
     }
     
-    ytd-searchbox[mode="legacy"] #container.ytd-searchbox {
+    #container.ytd-searchbox {
         /*** HEADER SEARCH BOX ***/
     	background: transparent !important;
         border: none !important;
         box-shadow: none !important;
+        width: 400px !important;
+    }
+    
+    #search-form.ytd-searchbox {
+        position: absolute !important;
+        top: 12px !important;
+        left: 162px !important;
     }
     
     #container.ytd-masthead #search {
         color: var(--secondary-color) !important;
-        font-family: "Roboto Condensed" !important;
+        font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
         font-size: 15pt !important;
-	}
+    }
     
     #container.ytd-masthead #search-icon-legacy.ytd-searchbox {
     	background: transparent !important;
