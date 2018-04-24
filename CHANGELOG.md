@@ -1,7 +1,7 @@
 # Changelog
 All code added/removed/changed will be listed in this changelog.
 
-## 29-03-2918
+## 29-03-2018
 ### Removed
 - at line 658-692
 ``` css
@@ -133,5 +133,27 @@ All code added/removed/changed will be listed in this changelog.
       font-family: "Roboto Condensed" !important;
       font-size: 15pt !important;
   }
+```
+
+## 24-04-2018
+
+### Added 
+- at line 181
+``` css
+  #search-form.ytd-searchbox {
+      position: absolute !important;
+      top: 12px !important;
+      left: 162px !important;
+  }
+```
+
+### Modified
+- at line 173
+``` css
+  #container.ytd-searchbox
+```
+- at line 189 
+``` css
+  font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 ```
 
