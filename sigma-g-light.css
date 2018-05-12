@@ -59,7 +59,7 @@
 	#button[aria-label="Upload"],
 	#masthead-container .style-scope.ytd-button-renderer[href="/upload"],
 	.super-title.ytd-video-primary-info-renderer,
-	#top-level-buttons.ytd-menu-renderer:not(:empty) + #button.ytd-menu-renderer,ytd-comment-renderer .more-button.ytd-comment-renderer,yt-icon.ytd-badge-supported-renderer,yt-icon.ytd-pinned-comment-badge-renderer,ytd-thumbnail-overlay-side-panel-renderer {
+	#top-level-buttons.ytd-menu-renderer:not(:empty) + #button.ytd-menu-renderer,ytd-author-comment-badge-renderer[icon-type="CHECK"].creator #icon.ytd-author-comment-badge-renderer,ytd-comment-renderer .more-button.ytd-comment-renderer,yt-icon.ytd-badge-supported-renderer,yt-icon.ytd-pinned-comment-badge-renderer,ytd-movie-upsell-renderer,ytd-thumbnail-overlay-side-panel-renderer {
 		display: none !important;
 	}
 
@@ -143,16 +143,16 @@
 		width: 26px;
 		margin-right: -7px !important;
 	}
-	
-    	#container.ytd-searchbox {
-		
+
+	#container.ytd-searchbox {
+
 		/*** HEADER SEARCH BOX ***/
 		background: transparent !important;
 		border: none !important;
 		box-shadow: none !important;
 		width: 400px !important;
-    	}
-    
+	}
+
 	#search-form.ytd-searchbox {
 		position: absolute !important;
 		top: 12px !important;
@@ -371,7 +371,7 @@
 	ytd-two-column-browse-results-renderer .badge-style-type-live-now.ytd-badge-supported-renderer *,
 	ytd-toggle-button-renderer.style-compact-gray[is-paper-button] * {
 		font-family: "Roboto Condensed" !important;
-		font-weight: bold;
+		font-weight: bold !important;
 	}
 
 	ytd-two-column-browse-results-renderer .badge-style-type-collection.ytd-badge-supported-renderer {
@@ -382,9 +382,10 @@
 
 		/*** HOME MORE BUTTON ***/
 		background: #2C82C9 !important;
+		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		height: 50px !important;
-		line-height: 48px !important;
+		height: 40px !important;
+		line-height: 40px !important;
 		width: 200px !important;
 	}
 
@@ -407,6 +408,7 @@
 		display: block !important;
 	}
 
+	#left-arrow yt-icon,
 	#right-arrow yt-icon {
 		fill: var(--fill) !important;
 	}
@@ -528,7 +530,13 @@
 		border-style: dotted;
 	}
 
-	yt-did-you-mean-renderer * {
+	#corrected.yt-search-query-correction,
+	#original {
+		color: var(--primary-color) !important;
+	}
+
+	yt-did-you-mean-renderer *,
+	yt-search-query-correction * {
 		color: var(--secondary-color);
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
@@ -539,6 +547,11 @@
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
 		padding: 15px !important;
+	}
+
+	.text-wrapper.ytd-video-renderer {
+		width: 100% !important;
+		max-width: 100% !important;
 	}
 
 	ytd-channel-renderer {
@@ -611,6 +624,7 @@
 	}
 
 	#description.ytd-channel-renderer {
+		color: var(--primary-color);
 		overflow: hidden !important;
 		text-overflow: ellipsis !important;
 		white-space: nowrap !important;
@@ -624,7 +638,7 @@
 		color: #FFF !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
-		font-weight: bold;
+		font-weight: bold !important;
 		padding: 14px 16px !important;
 		margin-top: 10px !important;
 		text-transform: uppercase !important;
@@ -633,6 +647,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer *,
 	#details.ytd-grid-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer * {
 		font-family: "Roboto Condensed" !important;
+		font-weight: bold !important;
 	}
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer  #more.ytd-vertical-list-renderer yt-formatted-string.ytd-vertical-list-renderer {
@@ -656,26 +671,70 @@
 		padding-left: 20px !important;
 	}
 
-	.style-scope.ytd-universal-watch-card-renderer {
+	.style-scope.ytd-universal-watch-card-renderer,
+	#watch-card-header.ytd-generic-watch-card {
 		background: var(--card-bg-2) !important;
 		border-top-right-radius: 2px !important;
 		border-top-left-radius: 2px !important;
 	}
 
-	.style-scope.ytd-universal-watch-card-renderer #watch-card-title.yt-simple-endpoint.ytd-watch-card-rich-header-renderer * {
+	#watch-card-header.ytd-generic-watch-card {
+		padding-bottom: 30px !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer ytd-watch-card-compact-video-renderer[is-condensed]:first-child {
+		padding-top: 15px !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer #watch-card-title.yt-simple-endpoint.ytd-watch-card-rich-header-renderer *,
+	#watch-card-header.ytd-generic-watch-card #watch-card-title {
 		font-family: "Roboto Condensed" !important;
 		font-size: 16pt !important;
 	}
 
-	#badge-row.ytd-watch-card-rich-header-renderer * {
+	.style-scope.ytd-universal-watch-card-renderer .title {
+		margin-bottom: 10px !important;
+		height: 20px !important;
+		max-height: 100px !important;
+		max-width: 100% !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	#badge-row.ytd-watch-card-rich-header-renderer *,
+	#watch-card-header.ytd-generic-watch-card  #subtitle-row * {
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
+		line-height: 20pt !important;
 	}
 
 	.style-scope.ytd-universal-watch-card-renderer #lists {
 		background: var(--card-bg-2) !important;
+		border: none !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		margin-top: -16px !important;
+	}
+
+	ytd-generic-watch-card paper-tabs.ytd-generic-watch-card {
+		background: var(--card-bg) !important;
+		border: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		padding: 10px 15px !important;
+		margin-top: -16px !important;
+	}
+
+	ytd-generic-watch-card paper-tabs.ytd-generic-watch-card * {
+		border: none !important;
+		color: var(--primary-color) !important;
+		font-weight: bold;
+		padding: 3px !important;
+	}
+
+	ytd-generic-watch-card .video-row.ytd-watch-card-video-list-renderer {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	.style-scope.ytd-universal-watch-card-renderer ytd-watch-card-compact-video-renderer[is-condensed] {
@@ -708,6 +767,12 @@
 		padding: 20px !important;
 	}
 
+	ytd-exploratory-results-renderer.ytd-item-section-renderer,
+	ytd-two-column-search-results-renderer ytd-shelf-renderer.ytd-item-section-renderer {
+		border-top: 1px dotted #BEBEBE !important;
+		border-bottom: 1px dotted #BEBEBE !important;
+	}
+
 	/* HISTORY */
 
 	/** DESCRIPTION : change the elements of the history page **/
@@ -722,6 +787,8 @@
 		text-transform: Capitalize !important;
 	}
 
+	#title.ytd-sub-feed-selector-renderer,
+	ytd-sub-feed-option-renderer.ytd-sub-feed-selector-renderer,
 	ytd-sub-feed-option-renderer.ytd-sub-feed-selector-renderer #title.ytd-sub-feed-selector-renderer,
 	ytd-sub-feed-option-renderer.ytd-sub-feed-selector-renderer {
 		border-bottom: 1px dotted #BEBEBE !important;
@@ -998,6 +1065,7 @@
 	}
 
 	#channel-info  #thumbnail-attribution.ytd-grid-channel-renderer {
+		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
 	}
@@ -1111,10 +1179,18 @@
 		white-space: nowrap !important;
 	}
 
+	.title.style-scope.ytd-video-primary-info-renderer {
+		color: var(--primary-color);
+		max-width: 100% !important;
+		overflow: hidden;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
 	#info #count {
 
 		/*** WATCH INFORMATIONS VIEW ***/
-		margin-top: 15px !important;
+		margin-top: 0px !important;
 	}
 
 	#info #count .view-count {
@@ -1338,7 +1414,6 @@
 
 	#footer.ytd-commentbox * {
 		border-radius: 2px !important;
-		box-shadow: none !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
 		font-weight: bold !important;
@@ -1396,6 +1471,10 @@
 
 	ytd-author-comment-badge-renderer.creator {
 		background: transparent !important;
+	}
+
+	ytd-author-comment-badge-renderer.creator #name {
+		overflow: visible !important;
 	}
 
 	ytd-author-comment-badge-renderer.creator #name * {
@@ -1594,6 +1673,15 @@
 		white-space: nowrap !important;
 	}
 
+	#unplayableText {
+
+		/*** WATCH PLAYLIST ITEMS DATA UNPLAYABLE ***/
+		color: var(--secondary-color) !important;
+		font-family: "Roboto Condensed" !important;
+		font-size: 14pt !important;
+		margin-bottom: 10px !important;
+	}
+
 	#playlist.ytd-watch #byline.ytd-playlist-panel-video-renderer {
 
 		/*** WATCH PLAYLIST ITEMS DATA UPLOADER ***/
@@ -1773,6 +1861,7 @@
 		color: #71BA51 !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
+		font-weight: bold !important;
 		text-align: right !important;
 		width: 100% !important;
 		margin-top: 10px !important;
@@ -1852,8 +1941,15 @@
 
 	yt-live-chat-message-input-renderer,
 	#contents.yt-live-chat-renderer,
-	.dropdown-content.style-scope.ytd-popup-container {
+	.dropdown-content.style-scope.ytd-popup-container,
+	#contentWrapper.iron-dropdown #items,
+	paper-listbox.yt-dropdown-menu {
 		background: var(--card-bg) !important;
+	}
+
+	ytd-menu-service-item-renderer:hover,
+	paper-listbox.yt-dropdown-menu paper-item.yt-dropdown-menu:hover {
+		background: var(--card-bg-2) !important;
 	}
 
 	.dropdown-content.style-scope.ytd-popup-container *,
