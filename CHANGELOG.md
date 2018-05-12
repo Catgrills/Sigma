@@ -157,3 +157,24 @@ All code added/removed/changed will be listed in this changelog.
   font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 ```
 
+## 12-05-2018
+
+### Added 
+- at line 552
+``` css
+  .text-wrapper.ytd-video-renderer {
+      width: 100% !important;
+	  max-width: 100% !important;
+  }
+```
+
+### Modified
+- at line 1190
+``` css
+  #info #count {
+      /*** WATCH INFORMATIONS VIEW ***/
+	  margin-top: 0px !important;
+   }
+```
+
+
