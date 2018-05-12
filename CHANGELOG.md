@@ -164,17 +164,32 @@ All code added/removed/changed will be listed in this changelog.
 ``` css
   .text-wrapper.ytd-video-renderer {
       width: 100% !important;
-	  max-width: 100% !important;
+      max-width: 100% !important;
   }
 ```
-
+- at line 1950
+``` css
+  ytd-menu-service-item-renderer:hover,
+  paper-listbox.yt-dropdown-menu paper-item.yt-dropdown-menu:hover {
+      background: var(--card-bg-2) !important;
+  }
+```
 ### Modified
 - at line 1190
 ``` css
   #info #count {
       /*** WATCH INFORMATIONS VIEW ***/
-	  margin-top: 0px !important;
-   }
+      margin-top: 0px !important;
+  }
 ```
-
+- at line 1942
+``` css
+  yt-live-chat-message-input-renderer,
+  #contents.yt-live-chat-renderer,
+  .dropdown-content.style-scope.ytd-popup-container,
+  #contentWrapper.iron-dropdown #items,
+  paper-listbox.yt-dropdown-menu {
+	background: var(--card-bg) !important;
+  }
+```
 
