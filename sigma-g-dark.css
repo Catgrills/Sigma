@@ -136,7 +136,8 @@
 		padding-bottom: 15px !important;
 	}
 
-	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
 		display: none !important;
 	}
 
