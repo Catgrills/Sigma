@@ -4,12 +4,12 @@
 
     /** DESCRIPTION : set the colors **/
 	:root {
-        --body-bg: #FFF !important; 
+        	--body-bg: #FFF !important; 
 		--card-bg: #F0F1F5 !important;
-        --card-bg-2: #282930 !important;
+        	--card-bg-2: #282930 !important;
 		--header-bg: #F0F1F5 !important;
 		--search-bg: #FFF !important;
-        --border-color: #BEBEBE !important;
+        	--border-color: #BEBEBE !important;
 		--primary-color: #282930 !important;
 		--secondary-color: #5E5E5E !important;
  		--fill: #7E7E7E !important;
@@ -136,7 +136,8 @@
 		padding-bottom: 15px !important;
 	}
 
-	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
 		display: none !important;
 	}
 
