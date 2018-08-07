@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma-G
 @namespace      https://github.com/Catgrills/Sigma-G
-@version        1.0.6
+@version        1.0.7
 @description    An userstyle for Youtube called Sigma-G
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -843,6 +843,12 @@
 		text-transform: Capitalize !important;
 	}
 
+	ytd-two-column-browse-results-renderer[page-subtype="history"] #secondary.ytd-two-column-browse-results-renderer {
+		background-color: transparent !important;
+		position: absolute !important;
+		right: 200px !important;
+	}
+
 	#title.ytd-sub-feed-selector-renderer,
 	ytd-sub-feed-option-renderer.ytd-sub-feed-selector-renderer,
 	ytd-sub-feed-option-renderer.ytd-sub-feed-selector-renderer #title.ytd-sub-feed-selector-renderer,
@@ -1241,18 +1247,22 @@
 	/* WATCH */
 
 	/** DESCRIPTION : change the elements of the watch page **/
-	ytd-watch:not([theater]) {
+	ytd-watch-flexy[flexy_][flexy-v2_][is-two-columns_] #columns.ytd-watch-flexy {
 
 		/*** WATCH CONTAINER ***/
-		margin-top: 70px !important;
+		background: transparent !important;
+		margin-top: 40px !important;
+		min-width: 10% !important;
+		max-width: 90% !important;
 	}
 
-	ytd-watch:not([theater]) #movie_player {
+	ytd-watch:not([theater]) #movie_player,.html5-video-player {
 
 		/*** WATCH PLAYER ***/
-		background: var(--card-bg) !important;
+		background: var(--card-bg-2) !important;
 		border-radius: 3px !important;
 		box-shadow: -1px 40px 51px -33px rgba(0, 0, 0, 0.75) !important;
+		width: 100% !important;
 	}
 
 	ytd-watch[theater] #movie_player {
@@ -1372,21 +1382,17 @@
 		text-transform: capitalize !important;
 	}
 
-	.style-scope.ytd-menu-renderer.force-icon-button:nth-child(1) #button yt-icon,
-	#like-button.ytd-comment-action-buttons-renderer yt-icon {
+	.style-scope.ytd-menu-renderer.force-icon-button:nth-child(1) #button yt-icon,#like-button.ytd-comment-action-buttons-renderer yt-icon {
 		background: no-repeat url("https://i.imgur.com/ev5nQtL.png") center !important;
 		background-size: cover !important;
 		filter: var(--invert) !important;
 	}
 
-	ytd-watch .style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(1) #button yt-icon,
-	#like-button.ytd-comment-action-buttons-renderer.style-default-active yt-icon {
+	ytd-watch .style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(1) #button yt-icon,#like-button.ytd-comment-action-buttons-renderer.style-default-active yt-icon {
 		opacity: .8 !important;
 	}
 
-	.style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(1) *,
-	#vote-count-left,
-	#vote-count-middle.ytd-comment-action-buttons-renderer {
+	.style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(1) *,#vote-count-left,#vote-count-middle.ytd-comment-action-buttons-renderer {
 		color: #2CC990 !important;
 	}
 
@@ -1396,8 +1402,7 @@
 		filter: var(--invert) !important;
 	}
 
-	.style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(2) #button yt-icon,
-	#dislike-button.ytd-comment-action-buttons-renderer.style-default-active yt-icon {
+	.style-scope.ytd-menu-renderer.force-icon-button.style-default-active:nth-child(2) #button yt-icon,#dislike-button.ytd-comment-action-buttons-renderer.style-default-active yt-icon {
 		opacity: .8 !important;
 	}
 
@@ -1605,8 +1610,7 @@
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
 	}
 
-	ytd-comment-renderer:not([comment-style="backstage-comment"])[is-reply] #author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer,
-	ytd-commentbox[is-reply] #author-thumbnail.ytd-commentbox,ytd-commentbox[is-reply] #author-thumbnail.ytd-commentbox img.yt-img-shadow {
+	ytd-comment-renderer:not([comment-style="backstage-comment"])[is-reply] #author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer,ytd-commentbox[is-reply] #author-thumbnail.ytd-commentbox,ytd-commentbox[is-reply] #author-thumbnail.ytd-commentbox img.yt-img-shadow {
 		max-height: 40px !important;
 		height: 40px !important;
 		max-width: 40px !important;
@@ -2317,3 +2321,5 @@
 	}
 
 }
+
+
