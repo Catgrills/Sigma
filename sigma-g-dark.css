@@ -1,8 +1,8 @@
 @-moz-document domain("youtube.com") {
 
-    	/* COLORS */
+    /* COLORS */
 
-    	/** DESCRIPTION : set the colors **/
+    /** DESCRIPTION : set the colors **/
 	:root {
 	    	--body-bg: #272932 !important; 
 		--card-bg: #2B3D41 !important;
@@ -76,7 +76,8 @@
 	ytd-movie-upsell-renderer,
 	ytd-notification-topbar-button-renderer.notification-button-style-type-conversation-default[is-icon-button],
 	ytd-thumbnail-overlay-side-panel-renderer,
-	ytd-unified-share-panel-renderer #search {
+	ytd-unified-share-panel-renderer #search,
+	ytd-video-secondary-info-renderer #more {
 		display: none !important;
 	}
 
@@ -1225,10 +1226,10 @@
 	ytd-watch-flexy[flexy_][flexy-v2_][is-two-columns_] #columns.ytd-watch-flexy {
 
 		/*** WATCH CONTAINER ***/
-		background: transparent !important;
-		margin-top: 40px !important;
-		min-width: 10% !important;
-		max-width: 90% !important;
+        background: transparent !important;
+        position: relative !important;
+        margin-top: 40px !important;
+        left: -15px !important;
 	}
 
 	ytd-watch:not([theater]) #movie_player,.html5-video-player {
@@ -1507,20 +1508,21 @@
 		margin-top: 5px;
 	}
 
-	.description.style-scope.ytd-video-secondary-info-renderer {
+    #description.ytd-video-secondary-info-renderer {
 
 		/*** WATCH INFORMATIONS DESCRIPTION ***/
+        margin-top: 20px;
+        margin-left: -60px;
+    }
+    
+    #description.ytd-video-secondary-info-renderer * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 16pt !important;
 		line-height: 23pt !important;
 		max-width: 90% !important;
 		margin-top: 25px !important;
 		margin-left: 0px !important;
-	}
-
-	.description.style-scope.ytd-video-secondary-info-renderer * {
-		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		opacity: .9 !important;
 	}
 
 	#meta-contents #content.ytd-expander,
