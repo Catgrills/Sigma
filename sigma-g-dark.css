@@ -1,8 +1,8 @@
 @-moz-document domain("youtube.com") {
 
-    /* COLORS */
+    	/* COLORS */
 
-    /** DESCRIPTION : set the colors **/
+    	/** DESCRIPTION : set the colors **/
 	:root {
 	    	--body-bg: #272932 !important; 
 		--card-bg: #2B3D41 !important;
@@ -1508,14 +1508,14 @@
 		margin-top: 5px;
 	}
 
-    #description.ytd-video-secondary-info-renderer {
+    	#description.ytd-video-secondary-info-renderer {
 
 		/*** WATCH INFORMATIONS DESCRIPTION ***/
-        margin-top: 20px;
-        margin-left: -60px;
-    }
+        	margin-top: 20px;
+        	margin-left: -62px;
+    	}
     
-    #description.ytd-video-secondary-info-renderer * {
+    	#description.ytd-video-secondary-info-renderer * {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 16pt !important;
