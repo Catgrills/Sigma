@@ -1533,14 +1533,14 @@
 		margin-top: 5px;
 	}
 
-    #description.ytd-video-secondary-info-renderer {
+    	#description.ytd-video-secondary-info-renderer {
 
 		/*** WATCH INFORMATIONS DESCRIPTION ***/
-        margin-top: 20px;
-        margin-left: -60px;
-    }
+        	margin-top: 20px;
+        	margin-left: -62px;
+    	}
     
-    #description.ytd-video-secondary-info-renderer * {
+    	#description.ytd-video-secondary-info-renderer * {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 16pt !important;
