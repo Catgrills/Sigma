@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma-G
 @namespace      https://github.com/Catgrills/Sigma-G
-@version        1.0.7
+@version        1.0.8
 @description    An userstyle for Youtube called Sigma-G
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2082,11 +2082,7 @@
 		background: #2C82C9 !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		line-height: 25px !important;
-		width: 433px !important;
-		margin: auto !important;
-		position: absolute !important;
-		right: -54px !important;
-		left: 0px !important;
+		width: 100% !important;
 	}
 
 	paper-button.yt-next-continuation * {
