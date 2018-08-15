@@ -2,7 +2,7 @@
 
 <img src="preview.png" width="100%">
 
-Preview of <i>Sigma-G</i>.
+Preview of <i>Sigma</i>.
 
 About
 -------------------------------
