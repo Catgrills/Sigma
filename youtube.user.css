@@ -1,30 +1,30 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.0
+@version        1.1.1
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-        	--body-bg: #FFF !important; 
+		--body-bg: #FFF !important;
 		--card-bg: #F0F1F5 !important;
-        	--card-bg-2: #282930 !important;
+		--card-bg-2: #282930 !important;
 		--header-bg: #F0F1F5 !important;
 		--search-bg: #FFF !important;
-        	--border-color: #BEBEBE !important;
+		--border-color: #BEBEBE !important;
 		--primary-color: #282930 !important;
 		--secondary-color: #5E5E5E !important;
- 		--fill: #7E7E7E !important;
+		--fill: #7E7E7E !important;
 		--invert: invert(0) !important;
 	}
 	`,
 	"Dark":`
 	:root {
-	    	--body-bg: #272932 !important; 
+		--body-bg: #272932 !important;
 		--card-bg: #2B3D41 !important;
-        	--card-bg-2: #4C5F6B !important;
+		--card-bg-2: #4C5F6B !important;
 		--header-bg: #2B3D41 !important;
 		--search-bg: #2B3D41 !important;
 		--border-color: #212121 !important;
@@ -1805,7 +1805,8 @@
 	}
 
 	#playlist-actions.ytd-playlist-panel-renderer *,
-	#publisher-container.ytd-playlist-panel-renderer * {
+	#publisher-container.ytd-playlist-panel-renderer *,
+	.publisher.ytd-playlist-panel-renderer:not(:empty) + .index-message.ytd-playlist-panel-renderer::before {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 15pt !important;
@@ -1815,8 +1816,8 @@
 
 		/*** WATCH PLAYLIST HEADER ACTIONS ***/
 		position: absolute !important;
-		top: 10px !important;
-		right: 10px !important;
+		top: 35px !important;
+		right: 65px !important;
 	}
 
 	.playlist-items.ytd-playlist-panel-renderer {
