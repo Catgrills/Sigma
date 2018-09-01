@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.1
+@version        1.1.2
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -545,11 +545,6 @@
 		margin-right: 10px !important;
 	}
 
-	ytd-two-column-search-results-renderer ytd-search-sub-menu-renderer {
-		border-bottom: 1px dotted #BEBEBE !important;
-		padding-bottom: 8px !important;
-	}
-
 	ytd-two-column-search-results-renderer ytd-shelf-renderer.ytd-item-section-renderer {
 		border-top: 1px dotted #BEBEBE !important;
 		border-bottom: 1px dotted #BEBEBE !important;
@@ -587,6 +582,10 @@
 		border-style: dotted;
 	}
 
+    #filter-menu.ytd-search-sub-menu-renderer {
+        border-bottom: 1px dotted var(--border-color) !important;
+    }
+    
 	#corrected.yt-search-query-correction,
 	#original {
 		color: var(--primary-color) !important;
