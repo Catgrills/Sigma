@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.2
+@version        1.1.6
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -58,12 +58,14 @@
 		background: transparent !important;
 	}
 
+    #columns.ytd-watch-flexy,
 	ytd-page-manager > .ytd-page-manager,
 	ytd-app {
 		background: var(--body-bg) !important;
 	}
 
 	#always-shown,
+    #author-reputation,
 	#autoplay.ytd-compact-autoplay-renderer,
 	.badge.badge-style-type-simple.style-scope.ytd-badge-supported-renderer,
 	.badge-style-type-featured.ytd-badge-supported-renderer,
@@ -77,10 +79,13 @@
 	#guide-links-primary.ytd-guide-renderer,
 	#hearted-border.ytd-creator-heart-renderer,
 	.less-button.ytd-comment-renderer,
+    #less.ytd-expander,
 	#logo.ytd-masthead,
+    #masthead-ad,
 	#masthead-container.ytd-app::after,
 	#play-button,
 	#primary-items #play-all,
+    .sbfl_b,
 	#sentiment,
 	#separator,
 	#show-hide-button,
@@ -157,6 +162,10 @@
 	#sections.ytd-guide-renderer > .ytd-guide-renderer:not(:last-child) {
 		border-bottom: 1px dotted #60646D !important;
 	}
+    
+    ytd-guide-collapsible-section-entry-renderer.ytd-guide-section-renderer:not(:first-child) {
+		border-top: 1px dotted #60646D !important;
+    }
 
 	#sections.ytd-guide-renderer > .ytd-guide-renderer:not(:last-child) {
 		padding-bottom: 15px !important;
@@ -167,7 +176,8 @@
 		display: none !important;
 	}
 
-	#guide-content .yt-simple-endpoint.style-scope.yt-formatted-string {
+	#guide-content .yt-simple-endpoint.style-scope.yt-formatted-string,
+    #guide-section-title.ytd-guide-section-renderer {
 		color: #FFF !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 17pt !important;
@@ -473,6 +483,16 @@
 	/* TRENDING/SUBSCRIPTIONS */
 
 	/** DESCRIPTION : change the elements of the trending/subscriptions page **/
+    ytd-channel-list-sub-menu-renderer.ytd-section-list-renderer {
+        border-bottom: 1px dotted #BEBEBE !important;
+    }
+    
+    #title.ytd-channel-list-sub-menu-avatar-renderer {
+        color: var(--primary-color) !important;
+        font-family: "Roboto Condensed" !important;
+        font-size: 14pt !important;
+    }
+    
 	ytd-two-column-browse-results-renderer.ytd-browse #dismissable.ytd-video-renderer {
 		background: var(--card-bg) !important;
 		border: 3px !important;
@@ -544,7 +564,7 @@
 		margin-left: 10px !important;
 		margin-right: 10px !important;
 	}
-
+    
 	ytd-two-column-search-results-renderer ytd-shelf-renderer.ytd-item-section-renderer {
 		border-top: 1px dotted #BEBEBE !important;
 		border-bottom: 1px dotted #BEBEBE !important;
@@ -581,11 +601,11 @@
 	#filter-group-name.ytd-search-filter-group-renderer {
 		border-style: dotted;
 	}
-
-    #filter-menu.ytd-search-sub-menu-renderer {
-        border-bottom: 1px dotted var(--border-color) !important;
-    }
     
+    #filter-menu.ytd-search-sub-menu-renderer {
+        border-bottom: 1px dotted #BEBEBE !important;
+    }
+
 	#corrected.yt-search-query-correction,
 	#original {
 		color: var(--primary-color) !important;
@@ -736,8 +756,14 @@
 
 	#watch-card-header.ytd-generic-watch-card {
 		padding-bottom: 30px !important;
-	}
+	}    
 
+    .yt-simple-endpoint.style-scope.ytd-watch-card-rich-header-renderer * {
+        color: #FFF !important;
+        font-family: "Roboto Condensed" !important;
+        font-size: 14pt !important;
+    }
+    
 	.style-scope.ytd-universal-watch-card-renderer ytd-watch-card-compact-video-renderer[is-condensed]:first-child {
 		padding-top: 15px !important;
 	}
@@ -752,12 +778,23 @@
 		margin-bottom: 10px !important;
 		height: 20px !important;
 		max-height: 100px !important;
-		max-width: 100% !important;
+		max-width: 80% !important;
 		overflow: hidden !important;
 		text-overflow: ellipsis !important;
 		white-space: nowrap !important;
 	}
-
+    
+    .style-scope.ytd-universal-watch-card-renderer .title * {
+        font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+        font-size: 14pt !important;
+    }
+    
+    .yt-simple-endpoint.style-scope.yt-formatted-string {
+        color: #FFF !important;
+        font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+        font-size: 14pt !important;
+    }
+    
 	#badge-row.ytd-watch-card-rich-header-renderer *,
 	#watch-card-header.ytd-generic-watch-card  #subtitle-row * {
 		font-family: "Roboto Condensed" !important;
@@ -807,6 +844,7 @@
 
 	#view-all-endpoint.yt-simple-endpoint.ytd-vertical-watch-card-list-renderer {
 		border: none !important;
+        font-weight: bold;
 		padding: 0px 15px 20px 15px !important;
 	}
 
@@ -828,6 +866,16 @@
 		border-top: 1px dotted #BEBEBE !important;
 		border-bottom: 1px dotted #BEBEBE !important;
 	}
+
+    ytd-watch-card-compact-video-renderer.ytd-vertical-watch-card-list-renderer:not([is-condensed]).ytd-vertical-watch-card-list-renderer, 
+    ytd-watch-card-one-vs-one-event-compact-video-renderer.ytd-vertical-watch-card-list-renderer {
+        margin-bottom: 16px;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        padding: 10px !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
 
 	/* HISTORY */
 
@@ -981,7 +1029,8 @@
 		line-height: 18pt !important;
 	}
 
-	.latest-search-time-text.style-scope.ytd-search-history-query-renderer {
+	.latest-search-time-text.style-scope.ytd-search-history-query-renderer,
+    .published-time-text.below-comment.ytd-comment-renderer {
 		margin-top: 20px !important;
 	}
 
@@ -996,12 +1045,14 @@
 
 	/** DESCRIPTION : change the elements of the channel page **/
 	#channel-header.ytd-c4-tabbed-header-renderer,
-	#tabs-inner-container.ytd-c4-tabbed-header-renderer {
+	#tabs-inner-container.ytd-c4-tabbed-header-renderer,
+    #tabs-inner-container.ytd-interactive-tabbed-header-renderer {
 		background-color: var(--card-bg-2) !important;
 	}
 
 	#channel-header.ytd-c4-tabbed-header-renderer *,
-	#tabs-inner-container.ytd-c4-tabbed-header-renderer * {
+	#tabs-inner-container.ytd-c4-tabbed-header-renderer *,
+    #tabs-inner-container.ytd-interactive-tabbed-header-renderer * {
 		color: #FFF !important;
 	}
 
@@ -1011,7 +1062,8 @@
 		line-height: 0pt !important;
 	}
 
-	#tabs-inner-container.ytd-c4-tabbed-header-renderer * {
+	#tabs-inner-container.ytd-c4-tabbed-header-renderer *,
+    #tabs-inner-container.ytd-interactive-tabbed-header-renderer * {
 		font-weight: bold !important;
 	}
 
@@ -1089,12 +1141,28 @@
 		width: 180px !important;
 		text-align: center !important;
 	}
+    
+    ytd-rich-list-header-renderer[title-style="TITLE_STYLE_TYPE_CHANNEL_INLINE_RECS"] #title.ytd-rich-list-header-renderer {
+		color: #3D8EB9 !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 18pt !important;
+		max-height: 30px !important;
+		height: 25px !important;
+		max-width: 100% !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+		margin-top: 2px !important;
+        margin-left: -16px;
+        margin-right: 100px !important;
+	}
 
 	#label-text.yt-dropdown-menu {
 		color: #3D8EB9 !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 18pt !important;
 		overflow: visible !important;
+        margin-top: -4px;
 	}
 
 	#label-icon.yt-dropdown-menu {
@@ -1255,7 +1323,7 @@
 	/* WATCH */
 
 	/** DESCRIPTION : change the elements of the watch page **/
-	ytd-watch-flexy[flexy_][flexy-v2_][is-two-columns_] #columns.ytd-watch-flexy {
+    #columns.ytd-watch-flexy {
 
 		/*** WATCH CONTAINER ***/
 		background: transparent !important;
@@ -2136,8 +2204,16 @@
 		background: var(--card-bg) !important;
 		border-bottom: none !important;
 		font-size: 18pt !important;
-		padding: 10px 10px 20px 10px !important;
+		padding: 30px 10px 20px 10px !important;
 	}
+    
+    #overflow.yt-live-chat-header-renderer {
+        filter: brightness(0) var(--invert) !important;
+    }
+    
+    #menu.yt-live-chat-text-message-renderer {
+        background: transparent;
+    }
 
 	#sections.ytd-multi-page-menu-renderer > .ytd-multi-page-menu-renderer:not(:last-child) {
 		border-bottom: 1px dotted var(--border-color) !important;
@@ -2332,3 +2408,4 @@
 	}
 
 }
+
