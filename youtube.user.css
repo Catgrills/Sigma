@@ -1,17 +1,17 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.6
+@version        1.1.8
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-		--body-bg: #FFF !important;
-		--card-bg: #F0F1F5 !important;
+		--body-bg: #F1F1F1 !important;
+		--card-bg: #FFF !important;
 		--card-bg-2: #282930 !important;
-		--header-bg: #F0F1F5 !important;
+		--header-bg: #FFF !important;
 		--search-bg: #FFF !important;
 		--border-color: #BEBEBE !important;
 		--primary-color: #282930 !important;
@@ -105,8 +105,8 @@
 	ytd-movie-upsell-renderer,
 	ytd-notification-topbar-button-renderer.notification-button-style-type-conversation-default[is-icon-button],
 	ytd-thumbnail-overlay-side-panel-renderer,
-	ytd-unified-share-panel-renderer #search,
-	ytd-video-secondary-info-renderer #more {
+	ytd-unified-share-panel-renderer #search,ytd-video-secondary-info-renderer #more,
+	ytd-browse[page-subtype="playlist"] #alerts.ytd-browse {
 		display: none !important;
 	}
 
@@ -170,7 +170,8 @@
 		padding-bottom: 15px !important;
 	}
 
-	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
 		display: none !important;
 	}
 
@@ -186,7 +187,7 @@
 		color: #FFF !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
-		height: 22px !important;
+		height: 23px !important;
 	}
 
 	.guide-entry-badge.ytd-guide-entry-renderer {
@@ -365,6 +366,30 @@
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
+	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer {
+		background: var(--card-bg-2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+	}
+
+	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 14pt !important;
+	}
+
+	ytd-post-renderer[surface_="backstage-surface-type-home"] #published-time-text.ytd-post-renderer {
+		overflow: visible;
+	}
+
+	ytd-post-renderer[surface_="backstage-surface-type-home"] #home-content-text.ytd-post-renderer {
+		line-height: 20pt;
+	}
+
+	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer #action-buttons,
+	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer #button.yt-icon-button {
+		display: none;
+	}
+
 	ytd-two-column-browse-results-renderer #byline-container {
 
 		/*** HOME SECTION CONTENT INFORMATIONS ***/
@@ -416,9 +441,22 @@
 		white-space: nowrap !important;
 	}
 
-	ytd-two-column-search-results-renderer .badge-style-type-live-now.ytd-badge-supported-renderer * {
+	.badge.badge-style-type-red.style-scope.ytd-badge-supported-renderer {
+		background: #16A085 !important;
+		border: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		color: #FFF !important;
+		font-family: "Roboto Condensed" !important;
+		font-size: 14pt !important;
+		padding: 12px 16px 14px 16px !important;
+		white-space: nowrap !important;
+	}
+
+	ytd-two-column-search-results-renderer .badge-style-type-live-now.ytd-badge-supported-renderer *,
+	.badge.badge-style-type-red.style-scope.ytd-badge-supported-renderer * {
 		font-family: "Roboto Condensed" !important;
 		font-weight: bold !important;
+		text-transform: uppercase;
 	}
 
 	ytd-toggle-button-renderer.style-compact-gray[is-paper-button] {
@@ -1027,13 +1065,14 @@
 	}
 
 	.latest-search-time-text.style-scope.ytd-search-history-query-renderer,
-	.published-time-text.below-comment.ytd-comment-renderer {
+	.published-time-text.below-.ytd-comment-renderer {
 		margin-top: 20px !important;
 	}
 
 	/* WATCH LATER */
 
 	/** DESCRIPTION : change the elements of the watch later **/
+	ytd-playlist-video-renderer:hover:not(.dragging),
 	ytd-playlist-video-renderer[is-editable]:hover:not(.dragging),.dragging {
 		background: var(--card-bg) !important;
 	}
@@ -1636,8 +1675,16 @@
 		font-size: 18pt !important;
 	}
 
+	ytd-comment-renderer .yt-simple-endpoint.style-scope.yt-formatted-string {
+		color: var(--primary-color) !important;
+	}
+
 	yt-dropdown-menu {
-		margin-top: 6px !important;
+		margin-top: 0px !important;
+	}
+
+	.style-scope.ytd-comment-replies-renderer {
+		margin-top: -1px !important;
 	}
 
 	yt-dropdown-menu * {
@@ -2227,8 +2274,9 @@
 	}
 
 	ytd-menu-service-item-renderer:hover,
-	paper-listbox.yt-dropdown-menu paper-item.yt-dropdown-menu:hover {
-		background: var(--card-bg-2) !important;
+	paper-listbox.yt-dropdown-menu paper-item.yt-dropdown-menu:hover,
+	paper-item.ytd-menu-service-item-renderer:hover {
+		background: var(--card-bg) !important;
 	}
 
 	.dropdown-content.style-scope.ytd-popup-container *,
@@ -2236,7 +2284,7 @@
 	yt-confirm-dialog-renderer[dialog][dialog][dialog] *,
 	paper-dialog *:not(#text) {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
 	}
 
