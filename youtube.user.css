@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.8
+@version        1.1.9
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -100,12 +100,16 @@
 	#top-level-buttons.ytd-menu-renderer:not(:empty) + #button.ytd-menu-renderer,
 	ytd-author-comment-badge-renderer[icon-type="CHECK"].creator #icon.ytd-author-comment-badge-renderer,
 	ytd-comment-renderer .more-button.ytd-comment-renderer,
+	ytd-horizontal-card-list-renderer.ytd-item-section-renderer,
 	yt-icon.ytd-badge-supported-renderer,
 	yt-icon.ytd-pinned-comment-badge-renderer,
+	ytd-mini-guide-renderer.ytd-app,
+	ytd-movie-renderer.ytd-item-section-renderer,
 	ytd-movie-upsell-renderer,
 	ytd-notification-topbar-button-renderer.notification-button-style-type-conversation-default[is-icon-button],
 	ytd-thumbnail-overlay-side-panel-renderer,
-	ytd-unified-share-panel-renderer #search,ytd-video-secondary-info-renderer #more,
+	ytd-unified-share-panel-renderer #search,
+	ytd-video-secondary-info-renderer #more,
 	ytd-browse[page-subtype="playlist"] #alerts.ytd-browse {
 		display: none !important;
 	}
@@ -170,8 +174,7 @@
 		padding-bottom: 15px !important;
 	}
 
-	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),
-	#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
+	#sections.ytd-guide-renderer > .ytd-guide-renderer:nth-last-child(2),#sections.ytd-guide-renderer > .ytd-guide-renderer:last-child {
 		display: none !important;
 	}
 
@@ -403,7 +406,8 @@
 		display: none !important;
 	}
 
-	ytd-two-column-browse-results-renderer #details.ytd-grid-video-renderer a.ytd-grid-video-renderer {
+	ytd-two-column-browse-results-renderer #details.ytd-grid-video-renderer a.ytd-grid-video-renderer,
+	#long-byline.ytd-video-meta-block {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
@@ -474,7 +478,7 @@
 	.toggle-button.paper-toggle-button {
 		box-shadow: none !important;
 	}
-	
+
 	ytd-two-column-browse-results-renderer .badge-style-type-live-now.ytd-badge-supported-renderer *,
 	ytd-toggle-button-renderer.style-compact-gray[is-paper-button] * {
 		font-family: "Roboto Condensed" !important;
@@ -739,6 +743,12 @@
 		line-height: 25px !important;
 	}
 
+	ytd-grid-playlist-renderer #view-more {
+		color: var(--secondary-color) !important;
+		margin-bottom: 20px !important;
+		text-transform: capitalize !important;
+	}
+
 	#description.ytd-channel-renderer {
 		color: var(--primary-color);
 		overflow: hidden !important;
@@ -847,6 +857,29 @@
 		border: none !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		margin-top: -16px !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer #lists #header {
+		margin-left: 10px !important;
+		margin-top: 10px !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer #lists #scroll-container #items {
+		margin-left: 10px;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer #lists #header * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 14pt !important;
+	}
+
+	.style-scope.ytd-universal-watch-card-renderer #lists #scroll-container #items * {
+		background: transparent;
+		border: none;
+		color: var(--primary-color) !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 12pt !important;
 	}
 
 	ytd-generic-watch-card paper-tabs.ytd-generic-watch-card {
@@ -1016,6 +1049,10 @@
 		border-bottom: 1px dotted #BEBEBE !important;
 	}
 
+	ytd-playlist-video-list-renderer {
+		margin-left: 70px !important;
+	}
+
 	ytd-playlist-video-renderer:last-child #content.ytd-playlist-video-renderer {
 		border: none !important;
 		padding-bottom: 40px !important;
@@ -1084,6 +1121,10 @@
 	/* CHANNEL */
 
 	/** DESCRIPTION : change the elements of the channel page **/
+	ytd-app[mini-guide-visible_] ytd-page-manager.ytd-app {
+		margin-left: 0px !important;
+	}
+
 	#channel-header.ytd-c4-tabbed-header-renderer,
 	#tabs-inner-container.ytd-c4-tabbed-header-renderer,
 	#tabs-inner-container.ytd-interactive-tabbed-header-renderer {
@@ -1386,14 +1427,13 @@
 	}
 
 	.captions-text {
-		line-height: 35pt;
+		line-height: 25pt;
 	}
 
 	.captions-text * {
 		border-radius: 3px !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		font-size: 18pt !important;
-		padding: 5px 8px 7px 8px !important;
+		font-size: 12pt !important;
 		width: 100% !important;
 	}
 
@@ -1459,14 +1499,10 @@
 		margin-left: 1px !important;
 	}
 
-	ytd-toggle-button-renderer[is-icon-button]:nth-child(1) {
-
-		/*** WATCH INFORMATIONS LIKE/DISLIKE BUTTONS ***/
-		margin-right: 15px !important;
-	}
-
 	.style-scope.ytd-menu-renderer.force-icon-button:nth-child(1) #button yt-icon,
 	.style-scope.ytd-menu-renderer.force-icon-button:nth-child(2) #button yt-icon {
+
+		/*** WATCH INFORMATIONS LIKE/DISLIKE BUTTONS ***/
 		height: 0px !important;
 		width: 0px !important;
 		padding: 38px 0px 0px 38px !important;
@@ -1843,6 +1879,7 @@
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 17pt !important;
+		overflow: visible !important;
 		text-transform: lowercase;
 	}
 
@@ -1923,12 +1960,14 @@
 		font-size: 15pt !important;
 	}
 
+	.publisher.ytd-playlist-panel-renderer {
+		overflow: visible;
+	}
+
 	#playlist-actions {
 
 		/*** WATCH PLAYLIST HEADER ACTIONS ***/
-		position: absolute !important;
-		top: 35px !important;
-		right: 65px !important;
+		margin-top: 10px;
 	}
 
 	.playlist-items.ytd-playlist-panel-renderer {
@@ -1947,6 +1986,10 @@
 	ytd-playlist-panel-video-renderer[selected] #index.ytd-playlist-panel-video-renderer,
 	#index.ytd-playlist-panel-video-renderer {
 		visibility: hidden !important;
+	}
+
+	ytd-playlist-panel-video-renderer:hover:not(.dragging) {
+		background-color: transparent;
 	}
 
 	.playlist-items.ytd-playlist-panel-renderer #thumbnail-container.ytd-playlist-panel-video-renderer {
@@ -2349,7 +2392,7 @@
 		background: var(--card-bg) !important;
 	}
 
-	ytd-menu-popup-renderer paper-menu *,
+	ytd-menu-popup-renderer *,
 	ytd-multi-page-menu-renderer * {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed" !important;
@@ -2402,6 +2445,23 @@
 		border: none;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		padding: 4px 0px 6px 0px;
+	}
+
+	/* MINI PLAYER */
+
+	/** DESCRIPTION : change the elements of the mini player **/
+	#player-container.ytd-miniplayer {
+		border-radius: 2px;
+	}
+
+	#card.ytd-miniplayer #info-bar.ytd-miniplayer {
+		background: var(--card-bg);
+	}
+
+	#card.ytd-miniplayer #info-bar.ytd-miniplayer * {
+		color: var(--primary-color);
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 12pt;
 	}
 
 }
