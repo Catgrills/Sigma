@@ -7,7 +7,7 @@ Preview of <i>Sigma</i>.
 About
 -------------------------------
 
-<i>Sigma</i> is a user style for </i>Youtube</i> (NEW YOUTUBE ONLY).
+<i>Sigma</i> is a user style for </i>Youtube</i>.
 
 User styles are code designed to alter the appearance of one, some, or all sites.
 
