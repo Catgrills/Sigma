@@ -1597,6 +1597,7 @@
 	}
 
 	#upload-info * {
+		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 15pt !important;
 		line-height: 22pt !important;
