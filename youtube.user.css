@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.1.9
+@version        1.2.0
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -70,6 +70,7 @@
 	.badge-style-type-featured.ytd-badge-supported-renderer,
 	#button[aria-label="Upload"],
 	#button .style-scope.ytd-topbar-menu-button-renderer,
+    	#clarify-box,
 	#collapsible,
 	#continuation.ytd-comment-replies-renderer yt-next-continuation.ytd-comment-replies-renderer,
 	#country-code.ytd-topbar-logo-renderer,
@@ -385,7 +386,7 @@
 	}
 
 	ytd-post-renderer[surface_="backstage-surface-type-home"] #home-content-text.ytd-post-renderer {
-		line-height: 20pt;
+		line-height: 20pt !important;
 	}
 
 	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer #action-buttons,
@@ -651,6 +652,7 @@
 	}
 
 	#corrected.yt-search-query-correction,
+    	.original-link.yt-search-query-correction,
 	#original {
 		color: var(--primary-color) !important;
 	}
@@ -723,7 +725,8 @@
 	}
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer #metadata-line.ytd-video-meta-block *,
-	ytd-section-list-renderer.ytd-two-column-search-results-renderer #metadata.ytd-channel-renderer * {
+	ytd-section-list-renderer.ytd-two-column-search-results-renderer #metadata.ytd-channel-renderer *,
+    	#text.ytd-channel-name {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 15pt !important;
@@ -1433,7 +1436,7 @@
 	.captions-text * {
 		border-radius: 3px !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		font-size: 12pt !important;
+		font-size: 18pt !important;
 		width: 100% !important;
 	}
 
@@ -1897,7 +1900,7 @@
 		margin-left: 3px !important;
 	}
 
-	#playlist {
+	#secondary #playlist {
 
 		/*** WATCH PLAYLIST ***/
 		border-radius: 2px !important;
@@ -1925,10 +1928,13 @@
 		/*** WATCH PLAYLIST HEADER ***/
 		background: var(--card-bg) !important;
 		border-bottom: 1px dotted var(--border-color) !important;
-		border-top-left-radius: 2px !important;
-		border-top-right-radius: 2px !important;
 		padding-bottom: 20px !important;
 	}
+    
+    #secondary .header.ytd-playlist-panel-renderer {
+        border-top-left-radius: 2px !important;
+        border-top-right-radius: 2px !important;
+    }
 
 	.playlist-items.ytd-playlist-panel-renderer .title.ytd-playlist-panel-renderer,
 	#container.ytd-playlist-panel-renderer .title.ytd-playlist-panel-renderer *,
@@ -2366,7 +2372,7 @@
 	.message.ytd-notification-renderer,
 	.metadata.ytd-notification-renderer * {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
 		line-height: 20pt !important;
 	}
@@ -2463,7 +2469,10 @@
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 12pt;
 	}
-
+    
+    ytd-playlist-panel-renderer[watch-color-update_] #container.ytd-playlist-panel-renderer {
+        border: none !important;
+    }
 }
 
 @-moz-document regexp("https://www.youtube.com/feed/subscriptions.*") {
