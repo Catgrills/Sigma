@@ -132,13 +132,13 @@
 
 		/*** HEADER CONTAINER ***/
 		background: var(--header-bg) !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	app-drawer[persistent].ytd-app {
 
 		/*** HEADER GUIDE ***/
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .25) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	#guide-icon.ytd-masthead {
@@ -468,7 +468,7 @@
 		background: #60646D !important;
 		border: none !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
@@ -495,7 +495,7 @@
 		/*** HOME MORE BUTTON ***/
 		background: #2C82C9 !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		height: 40px !important;
 		line-height: 40px !important;
 		width: 200px !important;
@@ -541,7 +541,7 @@
 	ytd-two-column-browse-results-renderer.ytd-browse #dismissable.ytd-video-renderer {
 		background: var(--card-bg) !important;
 		border: 3px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 15px !important;
 	}
 
@@ -667,7 +667,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer {
 		background: var(--card-bg) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 15px !important;
 	}
 
@@ -679,7 +679,7 @@
 	ytd-channel-renderer {
 		background: var(--card-bg) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding-right: 15px !important;
 		padding-bottom: 15px !important;
 		margin-top: 20px !important;
@@ -689,7 +689,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer ytd-playlist-renderer.ytd-item-section-renderer {
 		background: var(--card-bg-2) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 15px !important;
 	}
 
@@ -782,7 +782,7 @@
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer  #more.ytd-vertical-list-renderer yt-formatted-string.ytd-vertical-list-renderer {
 		background: #2C82C9 !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		height: 40px !important;
 		line-height: 40px !important;
 		width: 130px !important;
@@ -1209,13 +1209,13 @@
 
 	#thumbnail.ytd-playlist-thumbnail {
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	yt-formatted-string.ytd-expanded-shelf-contents-renderer {
 		background: #2C82C9 !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
@@ -1591,7 +1591,7 @@
 		/*** WATCH INFORMATIONS UPLOADER ***/
 		background: var(--card-bg) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .15) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 15px !important;
 		margin-top: 10px !important;
 	}
@@ -1932,10 +1932,10 @@
 		padding-bottom: 20px !important;
 	}
     
-    #secondary .header.ytd-playlist-panel-renderer {
-        border-top-left-radius: 2px !important;
-        border-top-right-radius: 2px !important;
-    }
+	#secondary .header.ytd-playlist-panel-renderer {
+		border-top-left-radius: 2px !important;
+		border-top-right-radius: 2px !important;
+	}
 
 	.playlist-items.ytd-playlist-panel-renderer .title.ytd-playlist-panel-renderer,
 	#container.ytd-playlist-panel-renderer .title.ytd-playlist-panel-renderer *,
@@ -2087,7 +2087,7 @@
 		/*** WATCH RELATED VIDEOS ITEMS ***/
 		background: var(--card-bg) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 15px !important;
 		width: 100% !important;
 		min-width: 100% !important;
@@ -2112,7 +2112,7 @@
 	#related ytd-compact-radio-renderer.ytd-watch-next-secondary-results-renderer,
 	#related ytd-compact-playlist-renderer.ytd-watch-next-secondary-results-renderer {
 		background: var(--card-bg-2) !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		border-radius: 2px !important;
 		padding: 15px !important;
 		width: 100% !important;
@@ -2127,7 +2127,7 @@
 
 		/*** WATCH RELATED VIDEOS ITEMS THUMBNAIL ***/
 		border-radius: 1px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	ytd-thumbnail-overlay-time-status-renderer[overlay-style="DEFAULT"] {
@@ -2257,7 +2257,7 @@
 
 	paper-button.yt-next-continuation {
 		background: #2C82C9 !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		line-height: 25px !important;
 		width: 100% !important;
 	}
@@ -2450,7 +2450,7 @@
 	#bar.ytd-copy-link-renderer {
 		background: var(--card-bg-2);
 		border: none;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		padding: 4px 0px 6px 0px;
 	}
 
@@ -2523,3 +2523,4 @@
 	}
 
 }
+
