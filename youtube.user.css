@@ -731,7 +731,7 @@
     	#text.ytd-channel-name {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		font-size: 15pt !important;
+		font-size: 14pt !important;
 	}
 
 	#metadata-line.ytd-video-meta-block > .ytd-video-meta-block:not(:last-of-type)::after,
