@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.2.1
+@version        1.2.2
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -24,7 +24,7 @@
 	:root {
 		--body-bg: #272932 !important;
 		--card-bg: #2B3D41 !important;
-		--card-bg-2: #4C5F6B !important;
+		--card-bg-2: #37454D !important;
 		--header-bg: #2B3D41 !important;
 		--search-bg: #2B3D41 !important;
 		--border-color: #212121 !important;
@@ -63,6 +63,7 @@
 		background: var(--body-bg) !important;
 	}
 
+	#alert-banner,
 	#always-shown,
 	#author-reputation,
 	#autoplay.ytd-compact-autoplay-renderer,
@@ -70,7 +71,7 @@
 	.badge-style-type-featured.ytd-badge-supported-renderer,
 	#button[aria-label="Upload"],
 	#button .style-scope.ytd-topbar-menu-button-renderer,
-    	#clarify-box,
+	#clarify-box,
 	#collapsible,
 	#continuation.ytd-comment-replies-renderer yt-next-continuation.ytd-comment-replies-renderer,
 	#country-code.ytd-topbar-logo-renderer,
@@ -83,6 +84,8 @@
 	#logo.ytd-masthead,
 	#masthead-ad,
 	#masthead-container.ytd-app::after,
+	#masthead-container .style-scope.ytd-button-renderer[href*="https://accounts"] * yt-icon,
+	.more-button-exp,
 	#play-button,
 	#primary-items #play-all,
 	.sbfl_b,
@@ -116,9 +119,10 @@
 	}
 
 	#masthead-container .style-scope.ytd-button-renderer[href*="https://accounts"] * {
+        border: none;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
-		font-weight: bold !important;
+		font-weight: normal !important;
 	}
 
 	.bold.yt-formatted-string {
@@ -319,7 +323,7 @@
 	ytd-two-column-browse-results-renderer #title.ytd-shelf-renderer {
 
 		/*** HOME SECTION TITLE ***/
-		color: #3D8EB9 !important;
+		color: #C44569 !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 18pt !important;
 		max-height: 30px !important;
@@ -374,11 +378,13 @@
 
 	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer {
 		background: var(--card-bg-2) !important;
+        border: none;
+        border-radius: 2px;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer * {
-		color: var(--primary-color) !important;
+		color: #FFF !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
 	}
@@ -437,7 +443,7 @@
 	ytd-two-column-search-results-renderer .badge-style-type-live-now.ytd-badge-supported-renderer {
 
 		/*** HOME CONTENT BADGE ***/
-		background: #F29B34 !important;
+		background: #F19066 !important;
 		border: none !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
@@ -478,6 +484,10 @@
 		margin-top: 10px !important;
 	}
 
+	.toggle-container.paper-toggle-button {
+		margin-right: -40px;
+	}
+
 	.toggle-button.paper-toggle-button {
 		box-shadow: none !important;
 	}
@@ -495,7 +505,7 @@
 	#toggle.ytd-grid-renderer {
 
 		/*** HOME MORE BUTTON ***/
-		background: #2C82C9 !important;
+		background: #546DE5 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		height: 40px !important;
@@ -728,8 +738,9 @@
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer #metadata-line.ytd-video-meta-block *,
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #metadata.ytd-channel-renderer *,
-    	#channel-title #text.ytd-channel-name,
-    	#dismissable #text.ytd-channel-name {
+	#metdata #text-container.ytd-channel-name *,
+	#channel-title #text.ytd-channel-name,
+	#dismissable #text.ytd-channel-name {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
@@ -764,7 +775,7 @@
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer,
 	#details.ytd-grid-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer {
-		background: #2CC990 !important;
+		background: #F19066 !important;
 		border: none !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
@@ -783,7 +794,7 @@
 	}
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer  #more.ytd-vertical-list-renderer yt-formatted-string.ytd-vertical-list-renderer {
-		background: #2C82C9 !important;
+		background: #546DE5 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		height: 40px !important;
@@ -954,7 +965,35 @@
 		text-overflow: ellipsis !important;
 		white-space: nowrap !important;
 	}
+    
+	/* LIBRARY */
 
+	/** DESCRIPTION : change the elements of the library page **/
+	.style-scope.ytd-profile-column-renderer {
+		margin-top: -30px;
+		margin-bottom: 50px !important;
+	}
+
+	.ytd-profile-column-renderer * {
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-family: "Roboto Condensed" !important;
+	}
+
+	#title.ytd-profile-column-user-info-renderer {
+		color: var(--primary-color);
+	}
+
+	#subtitle.ytd-profile-column-user-info-renderer {
+		color: var(--secondary-color) !important;
+		margin-top: 10px;
+	}
+
+	#items.ytd-profile-column-stats-renderer > .ytd-profile-column-stats-renderer:first-child,
+	#items.ytd-profile-column-stats-renderer > .ytd-profile-column-stats-renderer {
+		border-color: var(--border-color);
+	}
+    
 	/* HISTORY */
 
 	/** DESCRIPTION : change the elements of the history page **/
@@ -1216,7 +1255,7 @@
 	}
 
 	yt-formatted-string.ytd-expanded-shelf-contents-renderer {
-		background: #2C82C9 !important;
+		background: #546DE5 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
@@ -1368,7 +1407,7 @@
 
 	#content-text.ytd-backstage-post-renderer {
 		color: var(--primary-color) !important;
-		font-family: "Roboto Condensed" !important;
+		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
 		height: 30px !important;
 		line-height: 4rem !important;
@@ -1489,6 +1528,10 @@
 
 		/*** WATCH INFORMATIONS ***/
 		margin-top: 10px !important;
+	}
+    
+	#menu-container.ytd-video-primary-info-renderer {
+		margin-top: -15px !important;
 	}
 
 	#info #count {
@@ -1621,12 +1664,12 @@
 		text-transform: uppercase !important;
 	}
 
-    	#date {
-		color: var(--primary-color) !important;
+    #date * {
+		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed" !important;
-		font-size: 14pt !important;
+		font-size: 16pt !important;
 		text-transform: capitalize;
-    	}
+    }
     
 	.date.ytd-video-secondary-info-renderer {
 		color: var(--secondary-color) !important;
@@ -1643,8 +1686,16 @@
 	}
 
 	paper-button[subscribed].ytd-subscribe-button-renderer,
-	paper-button[subscribed].ytd-subscribe-button-renderer .style-scope.ytd-subscribe-button-renderer {
+	paper-button[subscribed].ytd-subscribe-button-renderer .style-scope.ytd-subscribe-button-renderer,
+	#notification-preference-button,
+	#notification-preference-button * {
 		background-color: #3E4651 !important;
+	}
+
+	#notification-preference-button {
+		border-radius: 2px;
+		padding-top: 2px;
+		margin-left: -18px;
 	}
 
 	paper-button[subscribed].ytd-subscribe-button-renderer * {
@@ -1773,8 +1824,7 @@
 	}
 
 	#submit-button * {
-		background: #00587A !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		background: #546DE5 !important;
 		color: #FFF !important;
 	}
 
@@ -1814,9 +1864,10 @@
 		white-space: nowrap !important;
 	}
 
-    	ytd-author-comment-badge-renderer[creator],
+    ytd-author-comment-badge-renderer[creator],
 	ytd-author-comment-badge-renderer.creator {
 		background: transparent !important;
+        padding-left: 0px;
 	}
 
 	ytd-author-comment-badge-renderer.creator #name {
@@ -1824,7 +1875,8 @@
 		margin-left: -7px !important;
 	}
 
-    	ytd-author-comment-badge-renderer[creator] *,
+	ytd-author-comment-badge-renderer[creator],
+	ytd-author-comment-badge-renderer[creator] *,
 	ytd-author-comment-badge-renderer.creator #name * {
 		color: #EB6361 !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
@@ -2113,7 +2165,7 @@
 		box-shadow: none !important;
 		padding: 0px !important;
 	}
-
+    
 	#related #items #contents {
 		border-bottom: 1px dotted #BEBEBE !important;
 		width: 100% !important;
@@ -2250,15 +2302,15 @@
 		background: transparent !important;
 		border: none !important;
 		border-radius: 2px !important;
-		color: #16A085 !important;
+		color: #F19066 !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
-		font-weight: bold !important;
+		font-weight: normal !important;
 		text-align: right !important;
 		width: 100% !important;
 		margin-top: 10px !important;
 		margin-right: -17px !important;
-		text-transform: uppercase !important;
+		text-transform: lowercase !important;
 		white-space: nowrap !important;
 	}
 
@@ -2276,7 +2328,7 @@
 	}
 
 	paper-button.yt-next-continuation {
-		background: #2C82C9 !important;
+		background: #546DE5 !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		line-height: 25px !important;
 		width: 100% !important;
@@ -2299,6 +2351,10 @@
 	yt-confirm-dialog-renderer[dialog][dialog][dialog],
 	paper-dialog {
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .7) !important;
+	}
+
+	.style-scope.ytd-popup-container {
+		background: transparent;
 	}
 
 	ytd-simple-menu-header-renderer,
@@ -2491,9 +2547,9 @@
 		font-size: 12pt;
 	}
     
-	ytd-playlist-panel-renderer[watch-color-update_] #container.ytd-playlist-panel-renderer {
-		border: none !important;
-	}
+    ytd-playlist-panel-renderer[watch-color-update_] #container.ytd-playlist-panel-renderer {
+        border: none !important;
+    }
 }
 
 @-moz-document regexp("https://www.youtube.com/feed/subscriptions.*") {
@@ -2525,7 +2581,7 @@
 	}
 
 	ytd-two-column-browse-results-renderer.ytd-browse .grid-subheader.ytd-shelf-renderer #menu #top-level-buttons ytd-button-renderer:last-child a::before {
-		background: #6BB18C !important;
+		background: #F19066 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 		color: #FFF !important;
