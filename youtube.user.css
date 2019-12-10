@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.2.2
+@version        1.2.3
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -97,6 +97,7 @@
 	#paper-input-label-1,
 	#paper-input-label-2,
 	#paper-input-label-3,
+    	#sponsor-button,
 	.style-scope.paper-input-char-counter,
 	.style-scope.ytd-share-panel-header-renderer,
 	.style-scope.ytd-unified-share-panel-renderer.enabled-for-contacts,
@@ -107,6 +108,7 @@
 	ytd-horizontal-card-list-renderer.ytd-item-section-renderer,
 	yt-icon.ytd-badge-supported-renderer,
 	yt-icon.ytd-pinned-comment-badge-renderer,
+    	yt-live-chat-viewer-engagement-message-renderer,
 	ytd-mini-guide-renderer.ytd-app,
 	ytd-movie-renderer.ytd-item-section-renderer,
 	ytd-movie-upsell-renderer,
@@ -253,7 +255,7 @@
 		border: none !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
-		padding: 15px 10px !important;
+		padding: 15px 10px 0px 10px !important;
 		margin-top: -2px !important;
 	}
 
@@ -262,7 +264,7 @@
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
 		font-weight: normal !important;
-		line-height: 24pt !important;
+		line-height: 25pt !important;
 	}
 
 	.sbsb_c.gsfs.sbsb_d:hover {
@@ -300,11 +302,20 @@
 	/* HOME */
 
 	/** DESCRIPTION : change the elements of the home page **/
-	ytd-two-column-browse-results-renderer.ytd-browse {
+	ytd-two-column-browse-results-renderer.ytd-browse,
+	#contents.ytd-rich-grid-renderer {
 
 		/*** HOME CONTAINER ***/
-		width: 80% !important;
+		width: 90% !important;
 		margin-top: 35px !important;
+	}
+
+	#grid-header.ytd-rich-grid-renderer {
+		width: 90% !important;
+	}
+
+	ytd-rich-shelf-renderer {
+		border-top: 1px dotted var(--border-color) !important;
 	}
 
 	ytd-two-column-browse-results-renderer #avatar {
@@ -320,7 +331,8 @@
 		width: 40px !important;
 	}
 
-	ytd-two-column-browse-results-renderer #title.ytd-shelf-renderer {
+	#title.ytd-rich-grid-renderer,
+    	#title.ytd-rich-shelf-renderer {
 
 		/*** HOME SECTION TITLE ***/
 		color: #C44569 !important;
@@ -335,11 +347,11 @@
 		margin-top: 2px !important;
 	}
 
-	ytd-two-column-browse-results-renderer #title-annotation.ytd-shelf-renderer {
+	ytd-two-column-browse-results-renderer #title-annotation.ytd-shelf-renderer,
+	#subtitle.ytd-rich-shelf-renderer {
 		font-family: "Roboto Condensed", "ぼくPたちのゴシック２ボールド" !important;
 		font-size: 17pt !important;
-		margin-top: -1px !important;
-		margin-left: 15px !important;
+		margin-top: 0px !important;
 		overflow: visible !important;
 	}
 
@@ -352,6 +364,10 @@
 
 	#top-level-buttons.ytd-menu-renderer #button yt-icon {
 		fill: var(--fill) !important;
+	}
+    
+	#show-more-button.ytd-rich-shelf-renderer {
+		border-bottom: none;
 	}
 
 	ytd-two-column-browse-results-renderer #items.yt-horizontal-list-renderer > .yt-horizontal-list-renderer,
@@ -376,17 +392,29 @@
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
+	#content.ytd-rich-item-renderer ytd-post-renderer.ytd-rich-item-renderer, 
+	#content.ytd-rich-item-renderer ytd-shared-post-renderer.ytd-rich-item-renderer,
 	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer {
 		background: var(--card-bg-2) !important;
-        border: none;
-        border-radius: 2px;
+		border: none;
+		border-radius: 2px;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
-	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer * {
+	#items.yt-horizontal-list-renderer > ytd-post-renderer.yt-horizontal-list-renderer *,
+	#content.ytd-rich-item-renderer ytd-post-renderer.ytd-rich-item-renderer *, 
+	#content.ytd-rich-item-renderer ytd-shared-post-renderer.ytd-rich-item-renderer * {
 		color: #FFF !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド" !important;
 		font-size: 14pt !important;
+	}
+
+	#vote-count-middle {
+		margin-top: -10px !important;
+	}
+
+	#reply-button-end #text {
+		margin-top: -7px !important;
 	}
 
 	ytd-post-renderer[surface_="backstage-surface-type-home"] #published-time-text.ytd-post-renderer {
@@ -567,12 +595,16 @@
 		width: 100px !important;
 	}
 
-	ytd-two-column-browse-results-renderer.ytd-browse #video-title.ytd-video-renderer,
+	#video-title.ytd-video-renderer,
+	#video-title.ytd-rich-grid-video-renderer,
 	ytd-two-column-browse-results-renderer.ytd-browse #channel-title.ytd-channel-renderer span.ytd-channel-renderer {
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 16pt !important;
 		height: 26px !important;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	ytd-two-column-browse-results-renderer.ytd-browse #metadata.ytd-channel-renderer * {
@@ -738,7 +770,7 @@
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer #metadata-line.ytd-video-meta-block *,
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #metadata.ytd-channel-renderer *,
-	#metdata #text-container.ytd-channel-name *,
+	#metadata #text-container.ytd-channel-name *,
 	#channel-title #text.ytd-channel-name,
 	#dismissable #text.ytd-channel-name {
 		color: var(--secondary-color) !important;
@@ -1008,6 +1040,13 @@
 		height: 30px !important;
 		margin-bottom: -10px !important;
 	}
+    
+	#title.ytd-item-section-header-renderer {
+		color: var(--secondary-color);
+		font-size: 16pt !important;
+		font-family: "Roboto Condensed" !important;
+		margin-top: 10px !important;
+	}
 
 	#contents.ytd-browse-feed-actions-renderer * {
 		color: var(--primary-color) !important;
@@ -1181,7 +1220,7 @@
 	#tabs-inner-container.ytd-interactive-tabbed-header-renderer * {
 		color: #FFF !important;
 	}
-
+    
 	#primary-links.ytd-c4-tabbed-header-renderer yt-formatted-string.ytd-c4-tabbed-header-renderer {
 		font-family: "Roboto Condensed" !important;
 		font-size: 14pt !important;
@@ -1445,6 +1484,15 @@
 	#links-container.ytd-channel-about-metadata-renderer {
 		border-bottom: 1px dotted #BEBEBE !important;
 	}
+    
+	#title.ytd-shelf-renderer,
+	#title-text.ytd-shelf-renderer * {
+		color: var(--primary-color);
+		font-family: "Roboto Condensed" !important;
+		font-size: 18pt !important;
+		overflow: visible !important;
+		max-height: 28pt !important;
+	}
 
 	/* WATCH */
 
@@ -1664,12 +1712,12 @@
 		text-transform: uppercase !important;
 	}
 
-    #date * {
+	#date * {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed" !important;
 		font-size: 16pt !important;
 		text-transform: capitalize;
-    }
+	}
     
 	.date.ytd-video-secondary-info-renderer {
 		color: var(--secondary-color) !important;
@@ -1845,6 +1893,7 @@
 	#label.ytd-pinned-comment-badge-renderer {
 
 		/*** WATCH COMMENTS PINNED ***/
+        color: var(--primary-color);
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
 		margin-bottom: 5px !important;
@@ -1864,10 +1913,10 @@
 		white-space: nowrap !important;
 	}
 
-    ytd-author-comment-badge-renderer[creator],
+	ytd-author-comment-badge-renderer[creator],
 	ytd-author-comment-badge-renderer.creator {
 		background: transparent !important;
-        padding-left: 0px;
+		padding-left: 0px;
 	}
 
 	ytd-author-comment-badge-renderer.creator #name {
@@ -2547,9 +2596,9 @@
 		font-size: 12pt;
 	}
     
-    ytd-playlist-panel-renderer[watch-color-update_] #container.ytd-playlist-panel-renderer {
-        border: none !important;
-    }
+	ytd-playlist-panel-renderer[watch-color-update_] #container.ytd-playlist-panel-renderer {
+		border: none !important;
+	}
 }
 
 @-moz-document regexp("https://www.youtube.com/feed/subscriptions.*") {
@@ -2599,4 +2648,5 @@
 	}
 
 }
+
 
