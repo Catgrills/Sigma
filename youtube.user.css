@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.2.4
+@version        1.2.5
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1854,8 +1854,9 @@
 	yt-dropdown-menu * {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed" !important;
-		font-size: 15pt !important;
+		font-size: 14pt !important;
 		font-weight: normal !important;
+		line-height: 20pt;
 		text-transform: Capitalize !important;
 	}
 
@@ -2436,6 +2437,10 @@
 		font-size: 18pt !important;
 		padding: 30px 10px 20px 10px !important;
 	}
+	
+	#contents.yt-live-chat-app {
+		background: var(--card-bg) !important;
+    	}
 
 	#overflow.yt-live-chat-header-renderer {
 		filter: brightness(0) var(--invert) !important;
