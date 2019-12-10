@@ -316,7 +316,7 @@
 	}
 
 	ytd-rich-shelf-renderer {
-		border-top: 1px dotted var(--border-color) !important;
+		border-top: 1px dotted #60646D !important;
 	}
 
 	ytd-two-column-browse-results-renderer #avatar {
