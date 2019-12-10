@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.2.3
+@version        1.2.4
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -102,6 +102,7 @@
 	.style-scope.ytd-share-panel-header-renderer,
 	.style-scope.ytd-unified-share-panel-renderer.enabled-for-contacts,
 	.super-title.ytd-video-primary-info-renderer,
+	#ticker,
 	#top-level-buttons.ytd-menu-renderer:not(:empty) + #button.ytd-menu-renderer,
 	ytd-author-comment-badge-renderer[icon-type="CHECK"].creator #icon.ytd-author-comment-badge-renderer,
 	ytd-comment-renderer .more-button.ytd-comment-renderer,
@@ -622,7 +623,8 @@
 		color: var(--secondary-color) !important;
 		font-family: "Roboto Condensed", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 14pt !important;
-		height: 20px !important;
+		height: 25px !important;
+		max-width: 50% !important;
 		overflow: hidden !important;
 		white-space: nowrap !important;
 		text-overflow: ellipsis !important;
@@ -1090,7 +1092,7 @@
 	#items.ytd-playlist-sidebar-renderer > .ytd-playlist-sidebar-renderer:not(:last-child) {
 		border-bottom: 1px dotted #BEBEBE !important;
 		padding-bottom: 10px !important;
-		margin-top: 6px !important;
+		margin-top: 11px !important;
 		margin-left: 15px !important;
 	}
 
@@ -1098,6 +1100,15 @@
 		box-shadow: none !important;
 		color: var(--primary-color) !important;
 		font-family: "Roboto Condensed" !important;
+	}
+	
+	#items.ytd-playlist-sidebar-renderer #text-displayed {
+		font-size: 14pt !important;
+	}
+
+	#items.ytd-playlist-sidebar-renderer #input {
+		font-size: 14pt !important;
+		width: auto !important;
 	}
 
 	#items.ytd-playlist-sidebar-renderer > .ytd-playlist-sidebar-renderer:not(:last-child) #stats {
@@ -1126,7 +1137,7 @@
 		background: var(--card-bg) !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
-		padding-top: 20px !important;
+		padding-top: 12px !important;
 	}
 
 	#content.ytd-playlist-video-renderer {
@@ -2478,6 +2489,15 @@
 
 	#entries.ytd-dropdown-renderer * {
 		line-height: 20pt;
+	}
+	
+	#entries.ytd-dropdown-renderer paper-item-body #label,
+	#entries.ytd-dropdown-renderer paper-item-body #description {
+		font-size: 12pt;
+	}
+
+	ytd-privacy-dropdown-item-renderer:hover {
+		background: var(--card-bg-2);
 	}
 
 	#header.ytd-add-to-playlist-renderer,
