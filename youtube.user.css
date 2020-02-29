@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.2.5
+@version        1.2.6
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -352,7 +352,7 @@
 	#subtitle.ytd-rich-shelf-renderer {
 		font-family: "Roboto Condensed", "ぼくPたちのゴシック２ボールド" !important;
 		font-size: 17pt !important;
-		margin-top: 0px !important;
+		margin-top: 15px !important;
 		overflow: visible !important;
 	}
 
@@ -410,12 +410,22 @@
 		font-size: 14pt !important;
 	}
 
-	#vote-count-middle {
+	.ytd-rich-shelf-renderer #header.ytd-post-renderer {
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	.ytd-rich-shelf-renderer #toolbar #vote-count-middle {
 		margin-top: -10px !important;
 	}
 
 	#reply-button-end #text {
 		margin-top: -7px !important;
+	}
+    
+	.style-scope.ytd-backstage-post-thread-renderer #expander * {
+		font-family: "Roboto Condensed" !important;
 	}
 
 	ytd-post-renderer[surface_="backstage-surface-type-home"] #published-time-text.ytd-post-renderer {
@@ -596,6 +606,7 @@
 		width: 100px !important;
 	}
 
+    	#video-title.ytd-video-renderer *,
 	#video-title.ytd-video-renderer,
 	#video-title.ytd-rich-grid-video-renderer,
 	ytd-two-column-browse-results-renderer.ytd-browse #channel-title.ytd-channel-renderer span.ytd-channel-renderer {
@@ -1639,6 +1650,7 @@
 		color: #6E6E6E;
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
+        margin-top: 0px !important;
 		text-transform: capitalize !important;
 	}
 
@@ -1902,10 +1914,11 @@
 		width: 40px !important;
 	}
 
-	#label.ytd-pinned-comment-badge-renderer {
+	#label.ytd-pinned-comment-badge-renderer,
+    	#label.ytd-pinned-comment-badge-renderer * {
 
 		/*** WATCH COMMENTS PINNED ***/
-        color: var(--primary-color);
+        	color: var(--primary-color);
 		font-family: "Roboto Condensed" !important;
 		font-size: 15pt !important;
 		margin-bottom: 5px !important;
@@ -2671,7 +2684,4 @@
 		bottom: 85px !important;
 		visibility: visible !important;
 	}
-
-}
-
 
