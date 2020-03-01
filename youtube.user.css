@@ -825,6 +825,7 @@
 	
 	#description.ytd-channel-renderer * {
 		font-family: "Roboto Condensed" !important;
+	}
 
 	ytd-section-list-renderer.ytd-two-column-search-results-renderer #dismissable.ytd-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer,
 	#details.ytd-grid-video-renderer .badge-style-type-simple.ytd-badge-supported-renderer {
