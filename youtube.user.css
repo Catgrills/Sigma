@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.3.1
+@version        1.3.2
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -70,6 +70,7 @@
         display: none !important;
     }
 
+    html,
     #columns,
     ytd-app,
     ytd-browse {
@@ -746,6 +747,10 @@
         font-size: 14pt !important;
         font-weight: bold !important;
         margin-bottom: 4px;
+    }
+	
+    .badge-style-type-verified-artist {
+	margin-bottom: 0px !important;
     }
 
     ytd-video-secondary-info-renderer #owner-sub-count {
