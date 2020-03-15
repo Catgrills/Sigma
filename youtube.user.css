@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.3.2
+@version        1.3.3
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1483,14 +1483,17 @@
         font-weight: bold !important;
     }
 
-    ytd-grid-renderer ytd-grid-playlist-renderer {
+    ytd-grid-renderer ytd-grid-playlist-renderer,
+    ytd-grid-renderer ytd-grid-radio-renderer {
 
         /*** LIBRARY THUMBNAILS ***/
         background: var(--card-bg);
         border: 1px solid var(--border-color) !important;
+	padding-bottom: 10px;
     }
 
-    ytd-grid-renderer ytd-grid-playlist-renderer #video-title {
+    ytd-grid-renderer ytd-grid-playlist-renderer #video-title,
+    ytd-grid-renderer ytd-grid-radio-renderer  #video-title {
 
         /*** LIBRARY THUMBNAILS TITLE ***/
         color: var(--primary-color);
@@ -1498,13 +1501,15 @@
         padding: 0px 10px;
     }
 
-    ytd-grid-renderer ytd-grid-playlist-renderer #metadata {
+    ytd-grid-renderer ytd-grid-playlist-renderer #metadata,
+    ytd-grid-renderer ytd-grid-radio-renderer #metadata {
 
         /*** LIBRARY THUMBNAILS METADATA ***/
         padding: 0px 10px;
     }
 
-    ytd-grid-renderer ytd-grid-playlist-renderer #metadata * {
+    ytd-grid-renderer ytd-grid-playlist-renderer #metadata *,
+    ytd-grid-renderer ytd-grid-radio-renderer #metadata * {
         color: var(--secondary-color);
         font-size: 12pt !important;
     }
