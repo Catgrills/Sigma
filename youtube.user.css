@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.3.5
+@version        1.3.6
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -621,6 +621,7 @@
         background: var(--card-bg);
         border: 1px solid var(--border-color);
         padding: 15px 15px 8px 15px !important;
+	overflow: hidden;
     }
 
     ytd-video-primary-info-renderer {
