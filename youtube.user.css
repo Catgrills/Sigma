@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.3.4
+@version        1.3.5
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -460,6 +460,7 @@
 
     /** DESCRIPTION : change the elements of the home page **/
     #grid-header #title,
+    #grid-title #title,
     #dismissable #title {
 
         /*** HOME SECTION TITLE ***/
