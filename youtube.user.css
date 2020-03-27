@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.0
+@version        1.4.1
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -55,6 +55,7 @@
     .ytd-comments #more-replies yt-icon,
     #country-code,
     #footer,
+    #merch-shelf,
     #related #metadata-line,
     #related .ytd-badge-supported-renderer,
     .sbfl_b,
@@ -1062,6 +1063,21 @@
         background: var(--border-color);
         border-radius: 0px !important;
     }
+	
+    yt-live-chat-message-input-renderer {
+
+        /*** WATCH SIDEBAR CHAT INPUT ***/
+        background: var(--card-bg-2) !important;
+        border-top: 1px solid var(--border-color) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        margin-bottom: -1px !important;
+    }
+    
+    yt-live-chat-message-input-renderer * {
+        color: var(--primary-color) !important;
+        border-color: var(--border-color) !important;
+        font-size: 12pt;
+    }	
 
     #secondary #playlist.ytd-watch-flexy {
 
@@ -1232,6 +1248,7 @@
         color: var(--secondary-color);
         font-size: 12pt;
         max-height: 5rem;
+	overflow: visible;
     }
 
     ytd-search #dismissable .text-wrapper #description-text,
