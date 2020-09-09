@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.2
+@version        1.4.3
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -62,6 +62,7 @@
     .style-scope.ytd-masthead.style-default,
     #tooltip,
     yt-live-chat-item-list-renderer #card,
+    ytd-info-panel-content-renderer[has-menu],
     ytd-inline-survey-renderer,
     ytd-metadata-row-container-renderer,
     ytd-mini-guide-renderer,
