@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.3
+@version        1.4.4
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -51,6 +51,7 @@
 
     #alerts,
     #autoplay,
+    #companion,
     .ytd-comments #less-replies yt-icon,
     .ytd-comments #more-replies yt-icon,
     #country-code,
