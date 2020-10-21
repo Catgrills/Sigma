@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.4
+@version        1.4.5
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1254,6 +1254,7 @@
     ytd-search #dismissable .text-wrapper #metadata *,
     ytd-search ytd-channel-renderer #content-section #metadata *,
     ytd-search ytd-playlist-renderer #content #channel-name *,
+    ytd-search #channel-name.ytd-video-renderer *,
     ytd-search ytd-radio-renderer #content #metadata * {
         color: var(--secondary-color);
         font-size: 12pt;
@@ -1328,6 +1329,10 @@
 
     .ytd-watch-card-compact-video-renderer * {
         font-size: 12pt !important;
+    }
+	
+    ytd-watch-card-compact-video-renderer[is-condensed] .title.ytd-watch-card-compact-video-renderer {
+	overflow: visible;
     }
 
     .ytd-watch-card-compact-video-renderer .title *,
