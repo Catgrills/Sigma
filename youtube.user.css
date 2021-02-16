@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.6
+@version        1.4.7
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -10,7 +10,7 @@
 	:root {
 		--body-bg: #FAFAFA !important;
 		--card-bg: #FFF !important;
-		--card-bg-2: #F0F1F1 !important;
+		--card-bg-2: #F6F6F6 !important;
 		--header-bg: #FFF !important;
 		--search-bg: #FFF !important;
 		--border-color: #E1E2E2 !important;
@@ -61,8 +61,10 @@
     #related .ytd-badge-supported-renderer,
     .sbfl_b,
     .style-scope.ytd-masthead.style-default,
+    .style-scope.ytd-rich-grid-renderer:first-child,
     #tooltip,
     yt-live-chat-item-list-renderer #card,
+    ytd-compact-link-renderer,
     ytd-info-panel-content-renderer[has-menu],
     ytd-inline-survey-renderer,
     ytd-metadata-row-container-renderer,
@@ -401,7 +403,8 @@
         font-size: 12pt;
     }
 
-    #logo-icon-container #youtube-paths path {
+    #logo-icon-container #youtube-paths path,
+    yt-icon.ytd-topbar-logo-renderer {
 
         /*** HEADER YOUTUBE LOGO ***/
         fill: var(--primary-color) !important;
@@ -697,8 +700,8 @@
 
         /*** WATCH PRIMARY INFORMATION METADATA ***/
         margin-top: -20px;
+	position: absolute;
         overflow: visible !important;
-        white-space: nowrap;
     }
 
     #info-contents #container.ytd-video-primary-info-renderer #info-text * {
@@ -818,8 +821,8 @@
 
         /*** WATCH SECONDARY INFORMATION MORE/LESS BUTTON ***/
         color: #2980B9 !important;
-        font-size: 12pt !important;
-        font-weight: bold !important;
+        font-size: 14pt !important;
+        text-transform: capitalize !important; 
         margin-top: 20px !important;
     }
 
@@ -876,6 +879,9 @@
 
         /*** WATCH COMMENTS PINNED BADGE ***/
         color: var(--secondary-color);
+        fill: #EB4D4B;
+        --iron-icon-height: 15px;
+        --iron-icon-width: 15px;
         font-size: 14pt !important;
     }
 
@@ -948,16 +954,20 @@
         font-size: 14pt !important;
         text-transform: capitalize;
     }
+		
+    #reply-button-end #button {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .05);
+        line-height: 16pt !important;
+        padding-bottom: 12px !important;
+    }
 
     #reply-button-end * {
         color: var(--primary-color) !important;
         font-weight: bold !important;
         font-size: 14pt !important;
         text-transform: capitalize !important;
-    }
-
-    #reply-button-end #button {
-        line-height: 16pt !important;
     }
 
     #vote-count-middle {
@@ -987,6 +997,39 @@
         box-shadow: none;
     }
 
+    .style-scope.yt-related-chip-cloud-renderer {
+
+	/*** WATCH RELATED SIDEBAR OPTIONS ***/
+	margin-top: 8px !important;
+    }
+
+    .style-scope.yt-chip-cloud-renderer.iron-selected,
+    yt-chip-cloud-chip-renderer.yt-chip-cloud-renderer {
+        border: 1px solid var(--border-color);
+        color: var(--primary-color);
+        font-size: 12pt;
+        padding-bottom: 3px;
+    }
+    
+    .style-scope.yt-chip-cloud-renderer.iron-selected {
+        background: var(--card-bg-2) !important;
+        opacity: .5;
+    }
+    
+    yt-chip-cloud-chip-renderer.yt-chip-cloud-renderer {
+        background: var(--card-bg);
+    }
+
+    .style-scope.yt-related-chip-cloud-renderer #left-arrow,
+    .style-scope.yt-related-chip-cloud-renderer #right-arrow {
+        border: 1px solid var(--border-color);
+        border-radius: 50%;    
+        height: 35px;
+        width: 35px;
+        padding: 0px;
+        margin-top: -3px;
+    }
+	
     #related #dismissable {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS ***/
@@ -1055,6 +1098,15 @@
         color: var(--primary-color) !important;
         font-size: 14pt !important;
     }
+	
+    #menu.yt-live-chat-text-message-renderer {
+        background: transparent;
+    }
+    
+    yt-live-chat-header-renderer #menu #subtitle {
+        font-size: 12pt !important;
+        line-height: 15pt !important;
+    }
 
     #chat,
     #items.yt-live-chat-item-list-renderer > .yt-live-chat-item-list-renderer:not(:first-child) {
@@ -1062,14 +1114,18 @@
         /*** WATCH SIDEBAR CHAT CONTENT ***/
         background: var(--card-bg) !important;
     }
+	
+    #chat {
+	border: 1px solid var(--border-color);	
+    }
 
     #chat * {
         color: var(--primary-color) !important;
         font-size: 14pt !important;
     }
-
-    #menu.yt-live-chat-text-message-renderer {
-        background: transparent;
+	
+    #input-panel.yt-live-chat-renderer::after {
+        height: 0px !important;
     }
 
     #secondary #chat #button {
@@ -1347,22 +1403,30 @@
 	overflow: visible;
     }
 
-    .ytd-watch-card-compact-video-renderer .title *,
-    .ytd-watch-card-compact-video-renderer .duration {
-        color: var(--primary-color) !important;
-    }
-
-    .ytd-watch-card-compact-video-renderer .subtitle {
-        color: var(--secondary-color) !important;
-    }
-
     ytd-title-and-button-list-header-renderer #title {
         color: var(--primary-color) !important;
         font-size: 14pt !important;
     }
 
+    .ytd-watch-card-compact-video-renderer .title *,
+    .ytd-watch-card-compact-video-renderer .duration {
+        color: var(--primary-color) !important;
+    }
+
+    .ytd-watch-card-compact-video-renderer .subtitle,
+    .ytd-watch-card-compact-video-renderer .subtitle * {
+        color: var(--secondary-color) !important;
+        margin-top: 3px;
+    }
+
     .ytd-watch-card-section-sequence-renderer {
         padding: 0px 1px 3px 1px;
+    }
+    
+    #view-all-endpoint.yt-simple-endpoint.ytd-vertical-watch-card-list-renderer {
+        color: var(--primary-color);
+        font-size: 14pt;
+        text-transform: capitalize;
     }
 
     /* TRENDING */
@@ -1414,6 +1478,17 @@
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
+    }
+	
+    ytd-browse #dismissable #channel-info ytd-channel-name {
+
+        /*** TRENDING THUMBNAILS CHANNEL NAME ***/
+        margin-top: -5px;
+    }
+    
+    ytd-browse #dismissable #channel-info ytd-channel-name * {
+        color: var(--secondary-color) !important;
+        font-size: 12pt !important;
     }
 
     ytd-browse #dismissable .text-wrapper #metadata {
