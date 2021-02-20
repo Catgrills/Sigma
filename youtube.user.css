@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.7
+@version        1.4.8
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -957,8 +957,7 @@
 		
     #reply-button-end #button {
         background: var(--card-bg-2) !important;
-        border: 1px solid var(--border-color) !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .05);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
         line-height: 16pt !important;
         padding-bottom: 12px !important;
     }
