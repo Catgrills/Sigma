@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.8
+@version        1.4.9
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -613,13 +613,15 @@
         font-size: 12pt;
     }
 
-    #like-button svg {
+    #like-button svg,
+    #top-level-buttons .style-scope.ytd-menu-renderer.force-icon-button.style-default-active:first-child * {
 
         /*** HOME LATEST POSTS THUMBNAILS LIKE ICON ***/
         fill: #27AE60 !important;
     }
 
-    #dislike-button svg {
+    #dislike-button svg,
+    #top-level-buttons .style-scope.ytd-menu-renderer.force-icon-button.style-default-active * {
 
         /*** HOME LATEST POSTS THUMBNAILS DISLIKE ICON ***/
         fill: #EB4D4B !important;
