@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.4.9
+@version        1.5.0
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -73,6 +73,7 @@
     ytd-primetime-promo-renderer
     #view-more.ytd-grid-playlist-renderer,
     ytd-search #dismissable .ytd-badge-supported-renderer,
+    ytd-search #dismissible .ytd-badge-supported-renderer,
     .ytp-tooltip {
         display: none !important;
     }
@@ -488,7 +489,8 @@
     /** DESCRIPTION : change the elements of the home page **/
     #grid-header #title,
     #grid-title #title,
-    #dismissable #title {
+    #dismissable #title,
+    #dismissible #title {
 
         /*** HOME SECTION TITLE ***/
         color: var(--primary-color) !important;
@@ -1031,14 +1033,16 @@
         margin-top: -3px;
     }
 	
-    #related #dismissable {
+    #related #dismissable,
+    #related #dismissible {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS ***/
         background: var(--card-bg);
         border: 1px solid var(--border-color);
     }
 
-    #related ytd-compact-video-renderer.ytd-compact-autoplay-renderer #dismissable {
+    #related ytd-compact-video-renderer.ytd-compact-autoplay-renderer #dismissable,
+    #related ytd-compact-video-renderer.ytd-compact-autoplay-renderer #dismissible {
         background: var(--card-bg-2);
     }
 
@@ -1046,14 +1050,17 @@
         border-bottom: 1px solid var(--border-color);
     }
 
-    #related #dismissable .details {
+    #related #dismissable .details,
+    #related #dismissible .details {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS DETAILS ***/
         padding: 10px 5px;
     }
 
     #related #dismissable .details #video-title,
-    #related #dismissable .details #movie-title {
+    #related #dismissable .details #movie-title,
+    #related #dismissible .details #video-title,
+    #related #dismissible .details #movie-title {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS TITLE ***/
         color: var(--primary-color);
@@ -1063,7 +1070,9 @@
     }
 
     #related #dismissable .details .ytd-channel-name,
-    #related #dismissable .details .movie-metadata {
+    #related #dismissable .details .movie-metadata,
+    #related #dismissible .details .ytd-channel-name,
+    #related #dismissible .details .movie-metadata {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS CHANNEL NAME ***/
         color: var(--secondary-color);
@@ -1076,7 +1085,8 @@
         max-height: 100%;
     }
 
-    #related #dismissable .details #button {
+    #related #dismissable .details #button,
+    #related #dismissible .details #button {
 
         /*** WATCH RELATED SIDEBAR THUMBNAILS BUTTON ***/
         margin-top: 3px;
@@ -1260,6 +1270,7 @@
     }
 
     ytd-search #dismissable.style-scope.ytd-video-renderer,
+    ytd-search #dismissible.style-scope.ytd-video-renderer,
     ytd-search ytd-playlist-renderer,
     ytd-search ytd-radio-renderer {
 
@@ -1289,7 +1300,8 @@
         padding: 12px 0px;
     }
 
-    ytd-search #dismissable .text-wrapper #video-title {
+    ytd-search #dismissable .text-wrapper #video-title,
+    ytd-search #dismissible .text-wrapper #video-title {
 
         /*** SEARCH THUMBNAILS TITLE ***/
         color: var(--primary-color);
@@ -1314,6 +1326,7 @@
     }
 
     ytd-search #dismissable .text-wrapper #metadata,
+    ytd-search #dismissible .text-wrapper #metadata,
     ytd-search ytd-channel-renderer #content-section #metadata {
 
         /*** SEARCH THUMBNAILS METADATA ***/
@@ -1321,6 +1334,7 @@
     }
 
     ytd-search #dismissable .text-wrapper #metadata *,
+    ytd-search #dismissible .text-wrapper #metadata *,
     ytd-search ytd-channel-renderer #content-section #metadata *,
     ytd-search ytd-playlist-renderer #content #channel-name *,
     ytd-search #channel-name.ytd-video-renderer *,
@@ -1332,7 +1346,9 @@
     }
 
     ytd-search #dismissable .text-wrapper #description-text,
-    ytd-search #dismissable .text-wrapper #description-text *,
+    ytd-search #dismissable .text-wrapper #description-text *,    
+    ytd-search #dismissible .text-wrapper #description-text,
+    ytd-search #dismissible .text-wrapper #description-text *,
     ytd-search ytd-channel-renderer #content-section #description {
 
         /*** SEARCH THUMBNAILS DESCRIPTION ***/
@@ -1456,14 +1472,16 @@
         padding: 6px 8px 8px 8px !important;
     }
 
-    ytd-browse #dismissable.style-scope.ytd-video-renderer {
+    ytd-browse #dismissable.style-scope.ytd-video-renderer,
+    ytd-browse #dismissible.style-scope.ytd-video-renderer {
 
         /*** TRENDING THUMBNAILS ***/
         background: var(--card-bg);
         border: 1px solid var(--border-color) !important;
     }
 
-    ytd-browse #dismissable .text-wrapper {
+    ytd-browse #dismissable .text-wrapper,
+    ytd-browse #dismissible .text-wrapper {
 
         /*** TRENDING THUMBNAILS CONTENT ***/
         padding: 12px 0px;
@@ -1471,7 +1489,8 @@
         max-width: 100% !important;
     }
 
-    ytd-browse #dismissable .text-wrapper #video-title {
+    ytd-browse #dismissable .text-wrapper #video-title,
+    ytd-browse #dismissible .text-wrapper #video-title {
 
         /*** TRENDING THUMBNAILS TITLE ***/
         color: var(--primary-color);
@@ -1481,31 +1500,37 @@
         white-space: nowrap !important;
     }
 	
-    ytd-browse #dismissable #channel-info ytd-channel-name {
+    ytd-browse #dismissable #channel-info ytd-channel-name,
+    ytd-browse #dismissible #channel-info ytd-channel-name {
 
         /*** TRENDING THUMBNAILS CHANNEL NAME ***/
         margin-top: -5px;
     }
     
-    ytd-browse #dismissable #channel-info ytd-channel-name * {
+    ytd-browse #dismissable #channel-info ytd-channel-name *,
+    ytd-browse #dismissible #channel-info ytd-channel-name * {
         color: var(--secondary-color) !important;
         font-size: 12pt !important;
     }
 
-    ytd-browse #dismissable .text-wrapper #metadata {
+    ytd-browse #dismissable .text-wrapper #metadata,
+    ytd-browse #dismissible .text-wrapper #metadata {
 
         /*** TRENDING THUMBNAILS METADATA ***/
         margin-top: 7px;
     }
 
-    ytd-browse #dismissable .text-wrapper #metadata * {
+    ytd-browse #dismissable .text-wrapper #metadata *,
+    ytd-browse #dismissible .text-wrapper #metadata * {
         color: var(--secondary-color);
         font-size: 12pt;
         max-height: 5rem;
     }
 
     ytd-browse #dismissable .text-wrapper #description-text,
-    ytd-browse #dismissable .text-wrapper #description-text * {
+    ytd-browse #dismissable .text-wrapper #description-text *,
+    ytd-browse #dismissible .text-wrapper #description-text,
+    ytd-browse #dismissible .text-wrapper #description-text * {
 
         /*** TRENDING THUMBNAILS DESCRIPTION ***/
         color: var(--primary-color);
