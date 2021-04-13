@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.1
+@version        1.5.2
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -237,7 +237,8 @@
     /* SUBSCRIBE BUTTON */
 
     /** DESCRIPTION : change the elements of the subscribe button **/
-    paper-button.ytd-subscribe-button-renderer {
+    paper-button.ytd-subscribe-button-renderer,
+    tp-yt-paper-button.ytd-subscribe-button-renderer {
         background: #EB4D4B;
         height: 40px !important;
     }
@@ -251,7 +252,8 @@
         color: var(--primary-color) !important;
     }
 
-    paper-button.ytd-subscribe-button-renderer * {
+    paper-button.ytd-subscribe-button-renderer *,
+    tp-yt-paper-button.ytd-subscribe-button-renderer * {
         color: #FFF !important;
         font-size: 12pt;
         font-weight: bold !important;
