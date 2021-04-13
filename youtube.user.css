@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.3
+@version        1.5.4
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1809,6 +1809,10 @@
 
     ytd-playlist-sidebar-renderer  #channel-name {
         line-height: 15pt !important;
+    }
+	
+    ytd-browse[page-subtype="playlist"] ytd-two-column-browse-results-renderer.ytd-browse {
+        background: transparent !important;
     }
 
     #primary.ytd-two-column-browse-results-renderer,
