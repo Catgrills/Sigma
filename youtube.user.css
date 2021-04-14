@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.4
+@version        1.5.5
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -998,6 +998,7 @@
         text-transform: capitalize !important;
     }
 
+    yt-chip-cloud-renderer,
     #scroll-container.yt-chip-cloud-renderer {
 	background: var(--body-bg) !important;
     }
