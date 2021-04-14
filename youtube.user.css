@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.7
+@version        1.5.8
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -822,6 +822,12 @@
         font-size: 14pt !important;
         line-height: 20pt;
     }
+	
+    ytd-video-secondary-info-renderer #description a.yt-simple-endpoint.style-scope.yt-formatted-string {
+
+        /*** WATCH SECONDARY INFORMATION DESCRIPTION LINKS ***/
+        color: #2980B9 !important;
+    } 
 
     .more-button,
     .less-button {
