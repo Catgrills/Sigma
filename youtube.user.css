@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.6
+@version        1.5.7
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -251,7 +251,7 @@
 
     #subscribe paper-button.style-scope.ytd-subscribe-button-renderer,
     .style-scope.ytd-subscribe-button-renderer[subscribed=""] {
-        background: var(--card-bg-2) !important;
+        background: var(--card-bg) !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
     }
 
