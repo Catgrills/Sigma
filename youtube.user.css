@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Sigma
 @namespace      https://github.com/Catgrills/Sigma
-@version        1.5.5
+@version        1.5.6
 @description    An user style for Youtube called Sigma.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -63,7 +63,6 @@
     .style-scope.ytd-masthead.style-default,
     .style-scope.ytd-rich-grid-renderer:first-child,
     #tooltip,
-    yt-live-chat-item-list-renderer #card,
     ytd-compact-link-renderer,
     ytd-info-panel-content-renderer[has-menu],
     ytd-inline-survey-renderer,
@@ -88,6 +87,10 @@
 
     ytd-app[mini-guide-visible_] ytd-page-manager.ytd-app {
         margin-left: 0px;
+    }
+	
+    .style-scope.ytd-badge-supported-renderer {
+	margin-top: 3px !important;
     }
 
     /* NOTIFICATION POPUP */
@@ -221,6 +224,7 @@
     }
 
     paper-listbox,
+    tp-yt-paper-listbox,
     .dropdown-content,
     ytd-menu-popup-renderer {
         background: transparent !important;
@@ -228,6 +232,7 @@
     }
 
     paper-listbox *,
+    tp-yt-paper-listbox *,
     .dropdown-content * {
         background: transparent !important;
         color: var(--primary-color) !important;
@@ -238,13 +243,15 @@
 
     /** DESCRIPTION : change the elements of the subscribe button **/
     paper-button.ytd-subscribe-button-renderer,
-    tp-yt-paper-button.ytd-subscribe-button-renderer {
+    tp-yt-paper-button.ytd-subscribe-button-renderer,
+    #subscribe-button ytd-button-renderer.style-destructive[is-paper-button] {
         background: #EB4D4B;
         height: 40px !important;
     }
 
-    #subscribe paper-button.style-scope.ytd-subscribe-button-renderer {
-        background: var(--card-bg-2);
+    #subscribe paper-button.style-scope.ytd-subscribe-button-renderer,
+    .style-scope.ytd-subscribe-button-renderer[subscribed=""] {
+        background: var(--card-bg-2) !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
     }
 
@@ -253,7 +260,8 @@
     }
 
     paper-button.ytd-subscribe-button-renderer *,
-    tp-yt-paper-button.ytd-subscribe-button-renderer * {
+    tp-yt-paper-button.ytd-subscribe-button-renderer *,
+    #subscribe-button ytd-button-renderer.style-destructive[is-paper-button] * {
         color: #FFF !important;
         font-size: 12pt;
         font-weight: bold !important;
@@ -393,6 +401,18 @@
         fill: var(--primary-color) !important;
     }
 
+    ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-button-renderer {
+        
+        /*** HEADER ACCOUNT SIGN IN ***/
+        background: #2980b9 !important;
+        border: none;
+    }
+
+    ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-button-renderer * {
+        color: #FFF !important;
+        font-weight: bold;
+    }
+	
     #channel-container * {
 
         /*** HEADER ACCOUNT POPUP ***/
@@ -596,25 +616,6 @@
 
     #content.ytd-rich-item-renderer #details .video-badge .badge * {
         font-weight: bold !important;
-    }
-
-    ytd-rich-shelf-renderer {
-
-        /*** HOME LATEST POSTS ***/
-        border-top: 1px solid var(--border-color);
-    }
-
-    #contents.ytd-rich-shelf-renderer .ytd-rich-shelf-renderer #content * {
-
-        /*** HOME LATEST POSTS THUMBNAILS ***/
-        background: var(--card-bg-2) !important;
-        border: none;
-        color: var(--primary-color);
-	font-size: 12pt !important;
-    }
-
-    #contents.ytd-rich-shelf-renderer .ytd-rich-shelf-renderer #content #header * {
-        font-size: 12pt;
     }
 
     #like-button svg,
@@ -961,14 +962,14 @@
         text-transform: capitalize;
     }
 		
-    #reply-button-end #button {
+    #action-buttons.ytd-comment-renderer #reply-button-end #button {
         background: var(--card-bg-2) !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+        border: 1px solid var(--border-color);
         line-height: 16pt !important;
         padding-bottom: 12px !important;
     }
 
-    #reply-button-end * {
+    #action-buttons.ytd-comment-renderer #reply-button-end * {
         color: var(--primary-color) !important;
         font-weight: bold !important;
         font-size: 14pt !important;
@@ -1458,6 +1459,34 @@
         font-size: 14pt;
         text-transform: capitalize;
     }
+	
+    /* DISCOVER */
+    
+    /** DESCRIPTION : change the elements of the discover page **/
+    ytd-destination-button-renderer {
+        background-color: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        margin-right: 2px !important;
+        margin-bottom: 2px !important;
+    }
+    
+    ytd-destination-button-renderer * {
+        color: var(--primary-color);
+        font-size: 15pt !important; 
+    }
+	
+    ytd-carousel-header-renderer {
+        background: var(--card-bg);
+    }
+	
+	    
+    ytd-carousel-header-renderer #title {
+        color: var(--primary-color) !important;
+    }
+    
+    ytd-carousel-header-renderer #subtitle {
+        color: var(--secondary-color) !important;
+    }
 
     /* TRENDING */
 
@@ -1478,6 +1507,11 @@
         color: var(--primary-color);
         font-size: 17pt !important;
         overflow: visible;
+    }
+	
+    #featured-badge.ytd-shelf-renderer {
+	margin-left: 8px;
+	margin-top: 9px !important;
     }
 
     #featured-badge .badge {
@@ -1573,7 +1607,7 @@
 
     ytd-grid-video-renderer {
         padding-right: 0px !important;
-        margin-right: 5px !important;
+        margin-right: 2px !important;
     }
 
     ytd-grid-video-renderer #details {
@@ -1936,7 +1970,8 @@
         line-height: 16pt;
     }
 
-    ytd-rich-list-header-renderer[title-style="TITLE_STYLE_TYPE_CHANNEL_INLINE_RECS"] #title.ytd-rich-list-header-renderer {
+    ytd-rich-list-header-renderer[title-style="TITLE_STYLE_TYPE_CHANNEL_INLINE_RECS"] #title.ytd-rich-list-header-renderer,
+    #primary-items.ytd-channel-sub-menu-renderer #label-text.yt-dropdown-menu {
 
         /*** CHANNEL CONTENT SECTION TITLE ***/
         color: var(--primary-color);
@@ -1994,7 +2029,7 @@
         background: var(--card-bg);
         border: 1px solid var(--border-color);
         padding-right: 0px !important;
-        margin-right: 5px !important;
+        margin-right: 2px !important;
     }
 
     ytd-grid-playlist-renderer #video-title {
@@ -2084,7 +2119,11 @@
         background-color: var(--card-bg-2) !important;
         border: 1px solid var(--border-color);
     }
-
+ 
+    #main .style-scope.ytd-comment-action-buttons-renderer.force-icon-button.style-default.size-default yt-icon {
+        margin-top: -5px !important;
+    }
+	
     ytd-channel-about-metadata-renderer * {
 
         /*** CHANNEL ABOUT CONTENT ***/
